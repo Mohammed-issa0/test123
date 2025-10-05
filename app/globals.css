@@ -12,6 +12,18 @@ html {
   font-weight: <weight>;
   font-style: normal;
 }
+@font-face {
+  font-family: "ar";
+  src: url("/fonts/ar.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+.ar {
+  font-family: "ar", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --background: oklch(1 0 0);

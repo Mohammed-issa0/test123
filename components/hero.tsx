@@ -5,7 +5,11 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import mainPhoto from "@/public/imgs/first-photo.png";
+import { useLanguage } from "@/contexts/language-provider";
+
 export function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative w-full bg-white px-6 py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -23,23 +27,22 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance"
             >
-              Together To Help
+              {t("hero.title.line1")}
               <br />
-              Our People In El
+              {t("hero.title.line2")}
               <br />
-              Fasher
+              {t("hero.title.line3")}
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl text-pretty"
             >
-              Make A Donation Today To Support Affected Families In El Fasher,
-              South Sudan. Your Help Could Provide Them With Food, Medicine, And
-              Shelter, Giving Them A Chance At A More Dignified Life And Hope
-              For A Better Tomorrow.
+              {t("hero.body")}
             </motion.p>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,10 +54,11 @@ export function Hero() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button className="bg-[#00A3E0] hover:bg-[#0088BD] text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 w-full sm:w-auto">
-                  Donate now
+                  {t("hero.cta.donate")}
                   <ChevronRight className="w-5 h-5" />
                 </Button>
               </motion.div>
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -63,7 +67,7 @@ export function Hero() {
                   variant="outline"
                   className="border-[#00A3E0] text-[#00A3E0] hover:bg-[#00A3E0] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg bg-transparent w-full sm:w-auto"
                 >
-                  about Fashir
+                  {t("hero.cta.about")}
                 </Button>
               </motion.div>
             </motion.div>

@@ -1,26 +1,39 @@
+"use client";
+
 import { Facebook, Instagram } from "lucide-react";
 import { FaWhatsapp, FaSnapchat, FaXTwitter } from "react-icons/fa6";
 import logoL from "@/public/imgs/logoL.png";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/language-provider";
+
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="w-full bg-[#061923] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         {/* Main Footer Row */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 mb-8">
           {/* Logo */}
-          <Image src={logoL} height={40} />
+          <Image
+            src={logoL}
+            alt="Smiles of Hope Logo"
+            height={40}
+            className="mx-auto md:mx-0"
+          />
 
           {/* Support Links */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-3">Support</h3>
+          <div className="text-center md:text-start">
+            <h3 className="text-white text-lg font-semibold mb-3">
+              {t("footer.support.title")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Privacy Policy
+                  {t("footer.support.privacy")}
                 </a>
               </li>
               <li>
@@ -28,22 +41,24 @@ export function Footer() {
                   href="#"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Terms And Conditions
+                  {t("footer.support.terms")}
                 </a>
               </li>
             </ul>
           </div>
 
           {/* About Links */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-3">About</h3>
+          <div className="text-center md:text-start">
+            <h3 className="text-white text-lg font-semibold mb-3">
+              {t("footer.about.title")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Our Mision
+                  {t("footer.about.mission")}
                 </a>
               </li>
               <li>
@@ -51,7 +66,7 @@ export function Footer() {
                   href="#"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Store
+                  {t("footer.about.store")}
                 </a>
               </li>
             </ul>
@@ -61,41 +76,41 @@ export function Footer() {
           <div className="hidden md:block w-px h-24 bg-gray-600"></div>
 
           {/* Social Media and Contact */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-center md:text-start">
             {/* Social Icons */}
-            <div className="flex gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <a
                 href="#"
-                className="text-white hover:text-[#00A3E0] transition-colors"
                 aria-label="WhatsApp"
+                className="hover:text-[#00A3E0] transition-colors"
               >
                 <FaWhatsapp className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-white hover:text-[#00A3E0] transition-colors"
                 aria-label="Snapchat"
+                className="hover:text-[#00A3E0] transition-colors"
               >
                 <FaSnapchat className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-white hover:text-[#00A3E0] transition-colors"
                 aria-label="Instagram"
+                className="hover:text-[#00A3E0] transition-colors"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-white hover:text-[#00A3E0] transition-colors"
                 aria-label="X"
+                className="hover:text-[#00A3E0] transition-colors"
               >
                 <FaXTwitter className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-white hover:text-[#00A3E0] transition-colors"
                 aria-label="Facebook"
+                className="hover:text-[#00A3E0] transition-colors"
               >
                 <Facebook className="w-6 h-6" />
               </a>
@@ -103,20 +118,16 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="flex flex-col gap-1 text-sm text-white">
-              <p>+1 (555) 010-1234</p>
-              <p>Info@Smilesofhope.Example.Org</p>
-              <p className="leading-relaxed">
-                123 Hope Lane, Suite 10, Everdale, Aurora County 018
-                <br />
-                Country Of Everland
-              </p>
+              <p>{t("footer.contact.phone")}</p>
+              <p>{t("footer.contact.email")}</p>
+              <p className="leading-relaxed">{t("footer.contact.address")}</p>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-white text-sm pt-8 border-gray-700">
-          © 2025 Smiles Of Hope Foundation. All Rights Reserved.
+        <div className="text-center text-white text-sm pt-8 border-t border-gray-700 mt-8">
+          © 2025 Smiles Of Hope Foundation. {t("footer.copyright")}
         </div>
       </div>
     </footer>

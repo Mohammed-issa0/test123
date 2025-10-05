@@ -4,35 +4,40 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import boy from "@/public/imgs/boy.png";
-const stats = [
-  {
-    number: "15",
-    label: "Carried Out 15 Medical Campaigns Benefiting Thousands Of Children.",
-    position: "top-left",
-  },
-  {
-    number: "3k+",
-    label: "Sponsored Over 3,000 Orphaned Children.",
-    position: "bottom-left",
-  },
-  {
-    number: "20k+",
-    label: "Distributed 20,000 School Bags With Supplies.",
-    position: "top-right",
-  },
-  {
-    number: "15",
-    label: "Carried Out 15 Medical Campaigns Benefiting Thousands Of Children.",
-    position: "bottom-right",
-  },
-];
+import { useLanguage } from "@/contexts/language-provider";
 
 export function Statistics() {
+  const { t } = useLanguage();
+
+  // مصدر موحد للنصوص/الأرقام
+  const stats = [
+    {
+      id: "top-left",
+      number: t("stats.topLeft.number"),
+      label: t("stats.topLeft.label"),
+    },
+    {
+      id: "bottom-left",
+      number: t("stats.bottomLeft.number"),
+      label: t("stats.bottomLeft.label"),
+    },
+    {
+      id: "top-right",
+      number: t("stats.topRight.number"),
+      label: t("stats.topRight.label"),
+    },
+    {
+      id: "bottom-right",
+      number: t("stats.bottomRight.number"),
+      label: t("stats.bottomRight.label"),
+    },
+  ];
+
   return (
     <section className="w-full px-6 py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center">
-          {/* Center Image - Boy */}
+        <div className="relative min-h-[520px] md:min-h-[700px] flex items-center justify-center">
+          {/* Center Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5, y: 50 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -47,14 +52,15 @@ export function Statistics() {
           >
             <Image
               src={boy}
-              alt="Statistics"
+              alt={t("stats.heroAlt")}
               width={800}
               height={800}
-              className="w-full max-w-2xl h-auto"
+              className="w-full max-w-xl md:max-w-2xl h-auto"
+              priority
             />
           </motion.div>
 
-          {/* Floating Statistics */}
+          {/* ====== Floating Statistics (md+ screens) ====== */}
           {/* Top Left */}
           <motion.div
             initial={{ opacity: 0, x: -100, y: 100, scale: 0.5 }}
@@ -67,7 +73,7 @@ export function Statistics() {
               animationIterationCount: "infinite",
             }}
             whileHover={{ scale: 1.1, rotate: 2 }}
-            className="absolute top-[15%] left-[5%] md:left-[10%] flex items-start gap-4"
+            className="hidden md:flex absolute top-[15%] left-[5%] md:left-[10%] items-start gap-4"
           >
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -87,11 +93,10 @@ export function Statistics() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-[#E5A910] text-4xl font-bold mb-2"
               >
-                15
+                {stats[0].number}
               </motion.div>
               <p className="text-[#061923] text-sm font-medium leading-tight">
-                Carried Out 15 Medical Campaigns Benefiting Thousands Of
-                Children.
+                {stats[0].label}
               </p>
             </div>
           </motion.div>
@@ -108,7 +113,7 @@ export function Statistics() {
               animationIterationCount: "infinite",
             }}
             whileHover={{ scale: 1.1, rotate: -2 }}
-            className="absolute bottom-[20%] left-[5%] md:left-[10%] flex items-start gap-4"
+            className="hidden md:flex absolute bottom-[20%] left-[5%] md:left-[10%] items-start gap-4"
           >
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -129,10 +134,10 @@ export function Statistics() {
                 transition={{ duration: 0.5, delay: 0.7 }}
                 className="text-[#E5A910] text-4xl font-bold mb-2"
               >
-                3k+
+                {stats[1].number}
               </motion.div>
               <p className="text-[#061923] text-sm font-medium leading-tight">
-                Sponsored Over 3,000 Orphaned Children.
+                {stats[1].label}
               </p>
             </div>
           </motion.div>
@@ -149,7 +154,7 @@ export function Statistics() {
               animationIterationCount: "infinite",
             }}
             whileHover={{ scale: 1.1, rotate: -2 }}
-            className="absolute top-[15%] right-[5%] md:right-[10%] flex items-start gap-4 flex-row-reverse"
+            className="hidden md:flex absolute top-[15%] right-[5%] md:right-[10%] items-start gap-4 flex-row-reverse"
           >
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -163,17 +168,17 @@ export function Statistics() {
             >
               <Heart className="w-6 h-6 text-white fill-white" />
             </motion.div>
-            <div className="hidden md:flex bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs  flex justify-around gap-2 items-center">
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs flex justify-around gap-2 items-center">
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
                 className="text-[#E5A910] text-4xl font-bold mb-2"
               >
-                20k+
+                {stats[2].number}
               </motion.div>
               <p className="text-[#061923] text-sm font-medium leading-tight">
-                Distributed 20,000 School Bags With Supplies.
+                {stats[2].label}
               </p>
             </div>
           </motion.div>
@@ -190,7 +195,7 @@ export function Statistics() {
               animationIterationCount: "infinite",
             }}
             whileHover={{ scale: 1.1, rotate: 2 }}
-            className=" absolute bottom-[20%] right-[5%] md:right-[10%] flex items-start gap-4 flex-row-reverse"
+            className="hidden md:flex absolute bottom-[20%] right-[5%] md:right-[10%] items-start gap-4 flex-row-reverse"
           >
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -204,21 +209,45 @@ export function Statistics() {
             >
               <Heart className="w-6 h-6 text-white fill-white" />
             </motion.div>
-            <div className="hidden md:flex bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs flex justify-around gap-2 items-center">
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs flex justify-around gap-2 items-center">
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.1 }}
                 className="text-[#E5A910] text-4xl font-bold mb-2"
               >
-                15
+                {stats[3].number}
               </motion.div>
               <p className="text-[#061923] text-sm font-medium leading-tight">
-                Carried Out 15 Medical Campaigns Benefiting Thousands Of
-                Children.
+                {stats[3].label}
               </p>
             </div>
           </motion.div>
+
+          {/* ====== Mobile Friendly List (shown on < md) ====== */}
+          <div className="md:hidden w-full absolute -bottom-6 left-0 px-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {stats.map((s, idx) => (
+                <div
+                  key={s.id}
+                  className="bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-[#E8EDF2] p-4 flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center border-4 border-white shadow">
+                    <Heart className="w-5 h-5 text-white fill-white" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="text-[#E5A910] text-2xl font-bold">
+                      {s.number}
+                    </div>
+                    <div className="text-[#061923] text-sm leading-tight">
+                      {s.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* ====== /Mobile ====== */}
         </div>
       </div>
     </section>

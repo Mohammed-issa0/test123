@@ -3,38 +3,50 @@
 import { ChevronRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/language-provider";
 
-const testimonies = [
+type TestimonyItem = {
+  titleKey: string;
+  descKey: string;
+  altKey: string;
+  thumbnail: string; // من public/
+};
+
+const testimonies: TestimonyItem[] = [
   {
-    title: "From The Heart Of Suffering... A Thank-You Message To Donors",
-    description:
-      "Words Of Gratitude From One Of The Families Who Received Aid, Reminding Us Of The Value Of Every Contribution, No Matter How Small",
+    titleKey: "testimonies.items.0.title",
+    descKey: "testimonies.items.0.desc",
+    altKey: "testimonies.items.0.alt",
     thumbnail: "/grateful-family-sudan.jpg",
   },
   {
-    title: "Certificate Of A Father Seeking A Livelihood For His Children",
-    description:
-      "A Grieving Father Shares His Daily Struggles To Feed His Family, And A Touching Message About The Power Of Patience.",
+    titleKey: "testimonies.items.1.title",
+    descKey: "testimonies.items.1.desc",
+    altKey: "testimonies.items.1.alt",
     thumbnail: "/father-with-children-sudan.jpg",
   },
   {
-    title: "A Child From El Fasher Dreams Of Returning To School.",
-    description:
-      "Touching Scenes Of A Child Talking About His Simple Dream Of Returning To School After Circumstances Separated Him From It.",
+    titleKey: "testimonies.items.2.title",
+    descKey: "testimonies.items.2.desc",
+    altKey: "testimonies.items.2.alt",
     thumbnail: "/child-student-sudan.jpg",
   },
   {
-    title: "A Mother Who Lost Her Home... But Did Not Lose Hope",
-    description:
-      "The Story Of A Brave Mother Who Lost Her Home In El Fasher, But Still Holds On To Hope For A Better Future For Her Children.",
+    titleKey: "testimonies.items.3.title",
+    descKey: "testimonies.items.3.desc",
+    altKey: "testimonies.items.3.alt",
     thumbnail: "/mother-children-sudan-hope.jpg",
   },
 ];
 
 export function Testimonies() {
+  const { t } = useLanguage();
+
   return (
     <section className="w-full px-6 py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* العنوان */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -44,6 +56,7 @@ export function Testimonies() {
         >
           <div className="flex items-center justify-center gap-3">
             <motion.span
+              aria-hidden
               animate={{ rotate: [0, 360] }}
               transition={{
                 duration: 2,
@@ -56,9 +69,10 @@ export function Testimonies() {
               ◆
             </motion.span>
             <h2 className="text-[#061923] text-3xl md:text-4xl font-bold">
-              Testimonies From The Field
+              {t("testimonies.title")}
             </h2>
             <motion.span
+              aria-hidden
               animate={{ rotate: [0, -360] }}
               transition={{
                 duration: 2,
@@ -73,10 +87,11 @@ export function Testimonies() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {testimonies.map((testimony, index) => (
+        {/* الشبكة متوافقة مع الموبايل: 1 → 2 → 4 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {testimonies.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.titleKey}
               initial={{ opacity: 0, y: 60, rotateY: -20 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -94,15 +109,19 @@ export function Testimonies() {
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
             >
               <div className="relative aspect-[4/3]">
-                <img
-                  src={testimony.thumbnail || "/placeholder.svg"}
-                  alt={testimony.title}
-                  className="w-full h-full object-cover"
+                <Image
+                  src={item.thumbnail || "/placeholder.svg"}
+                  alt={t(item.altKey)}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover"
+                  priority={index === 0}
                 />
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors"
+                  aria-label={t("testimonies.play")}
                 >
                   <motion.div
                     animate={{ scale: [1, 1.1, 1] }}
@@ -113,30 +132,32 @@ export function Testimonies() {
                     }}
                     className="w-16 h-16 bg-[#1F88C1] rounded-full flex items-center justify-center border-4 border-white shadow-lg"
                   >
-                    <Play className="w-7 h-7 text-white ml-1" fill="white" />
+                    <Play className="w-7 h-7 text-white ms-1" fill="white" />
                   </motion.div>
                 </motion.button>
               </div>
+
               <div className="p-5">
                 <h4 className="text-[#061923] text-base font-bold mb-2 line-clamp-2 leading-tight">
-                  {testimony.title}
+                  {t(item.titleKey)}
                 </h4>
                 <p className="text-[#061923] text-sm leading-relaxed mb-4 line-clamp-3">
-                  {testimony.description}
+                  {t(item.descKey)}
                 </p>
                 <motion.button
                   whileHover={{ x: 5 }}
                   className="text-[#1F88C1] text-sm font-semibold flex items-center justify-end w-full gap-1 hover:gap-2 transition-all"
+                  aria-label={t("testimonies.watch")}
                 >
-                  Watch It
-                  <ChevronRight className="w-4 h-4" />
+                  {t("testimonies.watch")}
+                  <ChevronRight className="w-4 h-4 ms-1" />
                 </motion.button>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Explore All Button */}
+        {/* زر استكشاف الكل */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -149,8 +170,8 @@ export function Testimonies() {
               variant="outline"
               className="border-2 border-[#061923] text-[#061923] hover:bg-[#061923] hover:text-white px-8 py-3 rounded-lg font-semibold bg-transparent"
             >
-              Explore all
-              <ChevronRight className="w-5 h-5 ml-2" />
+              {t("testimonies.exploreAll")}
+              <ChevronRight className="w-5 h-5 ms-2" />
             </Button>
           </motion.div>
         </motion.div>
