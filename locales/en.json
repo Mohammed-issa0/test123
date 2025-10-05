@@ -1,0 +1,119 @@
+{
+  "nav.media": "media",
+  "nav.campaign": "campaign",
+  "nav.projects": "projects",
+  "nav.implementers": "implementers",
+  "nav.donate": "Donate now",
+  "nav.lang.en": "EN",
+  "nav.lang.ar": "AR",
+  "nav.lang.switch": "Switch language",
+
+  "hero.title.line1": "Together To Help",
+  "hero.title.line2": "Our People In El",
+  "hero.title.line3": "Fasher",
+  "hero.body": "Make A Donation Today To Support Affected Families In El Fasher, South Sudan. Your Help Could Provide Them With Food, Medicine, And Shelter, Giving Them A Chance At A More Dignified Life And Hope For A Better Tomorrow.",
+  "hero.cta.donate": "Donate now",
+  "hero.cta.about": "about Fashir",
+
+  "campaign.about.label": "About The Campaign",
+  "campaign.about.title": "Hope Campaign For The People Of El Fasher",
+  "campaign.about.body": "A Humanitarian Campaign Aims To Raise Funds To Support Affected Families In South Sudan's El Fasher, By Providing Them With Food, Medicine, And Shelter, And Restoring Hope For A Decent Life.",
+  "campaign.about.img1Alt": "Campaign photo — volunteers and beneficiaries",
+  "campaign.about.img2Alt": "Campaign photo — aid and community support",
+
+  "implementers.title": "Implementers:",
+  "implementers.crescent.name": "Red Crescent",
+  "implementers.crescent.desc": "Responsible for field coordination and aid distribution.",
+  "implementers.crescent.alt": "Red Crescent logo",
+  "implementers.cross.name": "Red Cross",
+  "implementers.cross.desc": "Responsible for medical support and emergency response.",
+  "implementers.cross.alt": "Red Cross logo",
+  "implementers.placeholder": "More partners coming soon",
+
+  "projects.title": "Our Projects",
+  "projects.subtitle": "To Support The People Of El Fasher",
+  "projects.lead": "Through This Campaign, We Seek To Implement Sustainable Projects That Directly Impact People's Lives, Focusing On Several Key Areas That Help Affected Families Get Back On Their Feet:",
+  "projects.readMore": "Read More",
+  "projects.showAll": "Show all projects",
+
+  "projects.items.water.title": "Clean Water",
+  "projects.items.water.desc": "Providing School Supplies And Supporting Children To Return To School And Build A Better Future.",
+  "projects.items.water.alt": "Clean water icon",
+
+  "projects.items.food.title": "Food Baskets",
+  "projects.items.food.desc": "Providing Urgent Food, Medicine, And Shelter To Families Most Affected By The Humanitarian Situation.",
+  "projects.items.food.alt": "Food baskets icon",
+
+  "projects.items.medical.title": "Medical Care",
+  "projects.items.medical.desc": "Launching Small Initiatives To Employ And Provide Job Opportunities That Help Families Become Self-Sufficient.",
+  "projects.items.medical.alt": "Medical care icon",
+
+  "projects.items.psych.title": "Psychological Support For Women And Girls",
+  "projects.items.psych.desc": "Providing Urgent Food, Medicine, And Shelter To Families Most Affected By The Humanitarian Situation.",
+  "projects.items.psych.alt": "Psychological support icon",
+
+  "stats.heroAlt": "Campaign statistics illustration",
+  "stats.topLeft.number": "15",
+  "stats.topLeft.label": "Carried Out 15 Medical Campaigns Benefiting Thousands Of Children.",
+  "stats.bottomLeft.number": "3k+",
+  "stats.bottomLeft.label": "Sponsored Over 3,000 Orphaned Children.",
+  "stats.topRight.number": "20k+",
+  "stats.topRight.label": "Distributed 20,000 School Bags With Supplies.",
+  "stats.bottomRight.number": "15",
+  "stats.bottomRight.label": "Carried Out 15 Medical Campaigns Benefiting Thousands Of Children.",
+
+  "testimonies.title": "Testimonies From The Field",
+  "testimonies.play": "Play testimony",
+  "testimonies.watch": "Watch It",
+  "testimonies.exploreAll": "Explore all",
+
+  "testimonies.items.0.title": "From The Heart Of Suffering... A Thank-You Message To Donors",
+  "testimonies.items.0.desc": "Words Of Gratitude From One Of The Families Who Received Aid, Reminding Us Of The Value Of Every Contribution, No Matter How Small",
+  "testimonies.items.0.alt": "Grateful family in Sudan photo",
+
+  "testimonies.items.1.title": "Testimony Of A Father Seeking A Livelihood For His Children",
+  "testimonies.items.1.desc": "A grieving father shares his daily struggles to feed his family, and a touching message about the power of patience.",
+  "testimonies.items.1.alt": "Father with his children in Sudan",
+
+  "testimonies.items.2.title": "A Child From El Fasher Dreams Of Returning To School",
+  "testimonies.items.2.desc": "Touching scenes of a child talking about his simple dream of returning to school after circumstances separated him from it.",
+  "testimonies.items.2.alt": "Child student in Sudan",
+
+  "testimonies.items.3.title": "A Mother Who Lost Her Home... But Did Not Lose Hope",
+  "testimonies.items.3.desc": "The story of a brave mother who lost her home in El Fasher, but still holds on to hope for a better future for her children.",
+  "testimonies.items.3.alt": "Mother and children holding hope",
+
+  "media.title": "Media",
+  "media.exploreAll": "Explore all",
+
+  "media.items.0.date": "10/12/2025",
+  "media.items.0.title": "From Hunger To Hope: The Impact Of Daily School Meals",
+  "media.items.0.desc": "How One Warm Meal A Day Helps Children Focus, Learn, And Grow Healthier",
+  "media.items.0.alt": "Happy child eating a warm school meal",
+
+  "media.items.1.date": "10/12/2025",
+  "media.items.1.title": "From Hunger To Hope: The Impact Of Daily School Meals",
+  "media.items.1.desc": "How One Warm Meal A Day Helps Children Focus, Learn, And Grow Healthier",
+  "media.items.1.alt": "Smiling girl in school uniform",
+
+  "media.items.2.date": "10/12/2025",
+  "media.items.2.title": "From Hunger To Hope: The Impact Of Daily School Meals",
+  "media.items.2.desc": "How One Warm Meal A Day Helps Children Focus, Learn, And Grow Healthier",
+  "media.items.2.alt": "Diverse children learning in a classroom",
+
+  "partners.title": "Our Partners In This Campaign",
+
+  "footer.support.title": "Support",
+  "footer.support.privacy": "Privacy Policy",
+  "footer.support.terms": "Terms and Conditions",
+
+  "footer.about.title": "About",
+  "footer.about.mission": "Our Mission",
+  "footer.about.store": "Store",
+
+  "footer.contact.phone": "+1 (555) 010-1234",
+  "footer.contact.email": "Info@Smilesofhope.Example.Org",
+  "footer.contact.address": "123 Hope Lane, Suite 10, Everdale, Aurora County 018\nCountry Of Everland",
+
+  "footer.copyright": "All Rights Reserved."
+}

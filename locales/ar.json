@@ -1,0 +1,118 @@
+{
+  "nav.media": "وسائط",
+  "nav.campaign": "الحملات",
+  "nav.projects": "المشاريع",
+  "nav.implementers": "الجهات المنفذة",
+  "nav.donate": "تبرع الآن",
+  "nav.lang.en": "إنجليزي",
+  "nav.lang.ar": "عربي",
+  "nav.lang.switch": "تبديل اللغة",
+
+  "hero.title.line1": "معًا لنساعد",
+  "hero.title.line2": "أهلنا في",
+  "hero.title.line3": "الفاشر",
+  "hero.body": "تبرّع اليوم لدعم الأسر المتضررة في الفاشر، جنوب السودان. مساهمتك قد توفّر لهم الغذاء والدواء والمأوى، وتمنحهم حياة أكثر كرامة وأملًا بغدٍ أفضل.",
+  "hero.cta.donate": "تبرّع الآن",
+  "hero.cta.about": "عن الفاشر",
+
+  "campaign.about.label": "عن الحملة",
+  "campaign.about.title": "حملة الأمل لأهلنا في الفاشر",
+  "campaign.about.body": "حملة إنسانية تهدف لجمع التبرعات لدعم الأسر المتضررة في الفاشر، جنوب السودان، بتوفير الغذاء والدواء والمأوى، وإعادة الأمل لحياة كريمة.",
+  "campaign.about.img1Alt": "صورة من الحملة — متطوعون ومستفيدون",
+  "campaign.about.img2Alt": "صورة من الحملة — مساعدات ودعم مجتمعي",
+
+  "implementers.title": "الجهات المنفذة:",
+  "implementers.crescent.name": "الهلال الأحمر",
+  "implementers.crescent.desc": "مسؤول عن التنسيق الميداني وتوزيع المساعدات.",
+  "implementers.crescent.alt": "شعار الهلال الأحمر",
+  "implementers.cross.name": "الصليب الأحمر",
+  "implementers.cross.desc": "مسؤول عن الدعم الطبي والاستجابة للطوارئ.",
+  "implementers.cross.alt": "شعار الصليب الأحمر",
+  "implementers.placeholder": "شركاء آخرون قريبًا",
+
+  "projects.title": "مشاريعنا",
+  "projects.subtitle": "لدعم أهلنا في الفاشر",
+  "projects.lead": "من خلال هذه الحملة نسعى لتنفيذ مشاريع مستدامة تُحدث أثرًا مباشرًا في حياة الناس، بالتركيز على مجالات أساسية تساعد الأسر المتضررة على النهوض مجددًا:",
+  "projects.readMore": "اقرأ المزيد",
+  "projects.showAll": "عرض كل المشاريع",
+
+  "projects.items.water.title": "مياه نظيفة",
+  "projects.items.water.desc": "توفير المستلزمات الدراسية ودعم عودة الأطفال إلى المدارس لبناء مستقبل أفضل.",
+  "projects.items.water.alt": "أيقونة مياه نظيفة",
+
+  "projects.items.food.title": "سلال غذائية",
+  "projects.items.food.desc": "توفير الغذاء والدواء والمأوى على وجه السرعة للأسر الأكثر تضررًا من الوضع الإنساني.",
+  "projects.items.food.alt": "أيقونة سلال غذائية",
+
+  "projects.items.medical.title": "رعاية طبية",
+  "projects.items.medical.desc": "إطلاق مبادرات صغيرة لتوظيف وتوفير فرص عمل تُسهم في اكتفاء الأسر ذاتيًا.",
+  "projects.items.medical.alt": "أيقونة رعاية طبية",
+
+  "projects.items.psych.title": "دعم نفسي للنساء والفتيات",
+  "projects.items.psych.desc": "توفير الغذاء والدواء والمأوى بشكل عاجل للأسر الأكثر تضررًا من الوضع الإنساني.",
+  "projects.items.psych.alt": "أيقونة دعم نفسي",
+
+  "stats.heroAlt": "رسم يوضّح إحصاءات الحملة",
+  "stats.topLeft.number": "15",
+  "stats.topLeft.label": "تنفيذ 15 حملة طبية استفاد منها آلاف الأطفال.",
+  "stats.bottomLeft.number": "3k+",
+  "stats.bottomLeft.label": "كفالة أكثر من 3,000 طفل يتيم.",
+  "stats.topRight.number": "20k+",
+  "stats.topRight.label": "توزيع 20,000 حقيبة مدرسية مع المستلزمات.",
+  "stats.bottomRight.number": "15",
+  "stats.bottomRight.label": "تنفيذ 15 حملة طبية استفاد منها آلاف الأطفال.",
+
+  "testimonies.title": "شهادات من الميدان",
+  "testimonies.play": "تشغيل الشهادة",
+  "testimonies.watch": "شاهدها",
+  "testimonies.exploreAll": "استعرض الكل",
+
+  "testimonies.items.0.title": "من قلب المعاناة... رسالة شكر للمتبرعين",
+  "testimonies.items.0.desc": "كلمات امتنان من إحدى العائلات التي تلقت المساعدة، تذكّرنا بقيمة كل مساهمة مهما كانت صغيرة.",
+  "testimonies.items.0.alt": "صورة لعائلة ممتنة في السودان",
+
+  "testimonies.items.1.title": "شهادة أب يسعى للرزق لأطفاله",
+  "testimonies.items.1.desc": "أبٌ مفجوع يشارك صراعاته اليومية لإطعام أسرته، ورسالة مؤثرة عن قوة الصبر.",
+  "testimonies.items.1.alt": "أب مع أطفاله في السودان",
+
+  "testimonies.items.2.title": "طفل من الفاشر يحلم بالعودة إلى المدرسة",
+  "testimonies.items.2.desc": "مشاهد مؤثرة لطفل يتحدث عن حلمه البسيط بالعودة إلى المدرسة بعد أن أبعدته الظروف عنها.",
+  "testimonies.items.2.alt": "طفل طالب في السودان",
+
+  "testimonies.items.3.title": "أم فقدت بيتها... لكنها لم تفقد الأمل",
+  "testimonies.items.3.desc": "قصة أم شجاعة فقدت منزلها في الفاشر، لكنها لا تزال متمسكة بالأمل من أجل مستقبل أفضل لأطفالها.",
+  "testimonies.items.3.alt": "أم وأطفالها متمسكون بالأمل",
+
+  "media.title": "الوسائط",
+  "media.exploreAll": "استعرض الكل",
+
+  "media.items.0.date": "12/10/2025",
+  "media.items.0.title": "من الجوع إلى الأمل: أثر الوجبة المدرسية اليومية",
+  "media.items.0.desc": "كيف تساعد وجبة دافئة يوميًا الأطفال على التركيز والتعلّم والنمو بصحة أفضل",
+  "media.items.0.alt": "طفل سعيد يتناول وجبة مدرسية دافئة",
+
+  "media.items.1.date": "12/10/2025",
+  "media.items.1.title": "من الجوع إلى الأمل: أثر الوجبة المدرسية اليومية",
+  "media.items.1.desc": "كيف تساعد وجبة دافئة يوميًا الأطفال على التركيز والتعلّم والنمو بصحة أفضل",
+  "media.items.1.alt": "طفلة مبتسمة بالزي المدرسي",
+
+  "media.items.2.date": "12/10/2025",
+  "media.items.2.title": "من الجوع إلى الأمل: أثر الوجبة المدرسية اليومية",
+  "media.items.2.desc": "كيف تساعد وجبة دافئة يوميًا الأطفال على التركيز والتعلّم والنمو بصحة أفضل",
+  "media.items.2.alt": "مجموعة أطفال متنوعين يتعلّمون داخل الصف",
+  "partners.title": "شركاؤنا في هذه الحملة",
+
+  "footer.support.title": "الدعم",
+  "footer.support.privacy": "سياسة الخصوصية",
+  "footer.support.terms": "الشروط والأحكام",
+
+  "footer.about.title": "عن المؤسسة",
+  "footer.about.mission": "مهمتنا",
+  "footer.about.store": "المتجر",
+
+  "footer.contact.phone": "+1 (555) 010-1234",
+  "footer.contact.email": "Info@Smilesofhope.Example.Org",
+  "footer.contact.address": "123 طريق الأمل، جناح 10، إيفرديل، مقاطعة أورورا 018\nدولة إيفرلانـد",
+
+  "footer.copyright": "جميع الحقوق محفوظة."
+}
