@@ -8,8 +8,8 @@
   "nav.lang.ar": "عربي",
   "nav.lang.switch": "تبديل اللغة",
 
-  "hero.title.line1": "معًا لنساعد",
-  "hero.title.line2": "أهلنا في",
+  "hero.title.line1": " معنا لمد يد",
+  "hero.title.line2": "العون لاهلنا في",
   "hero.title.line3": "الفاشر",
   "hero.body": "تبرّع اليوم لدعم الأسر المتضررة في الفاشر، جنوب السودان. مساهمتك قد توفّر لهم الغذاء والدواء والمأوى، وتمنحهم حياة أكثر كرامة وأملًا بغدٍ أفضل.",
   "hero.cta.donate": "تبرّع الآن",
@@ -114,5 +114,30 @@
   "footer.contact.email": "Info@Smilesofhope.Example.Org",
   "footer.contact.address": "123 طريق الأمل، جناح 10، إيفرديل، مقاطعة أورورا 018\nدولة إيفرلانـد",
 
-  "footer.copyright": "جميع الحقوق محفوظة."
+  "footer.copyright": "جميع الحقوق محفوظة.",
+
+  "contact.title": "مراكزنا ومعلومات التواصل",
+  "contact.country.label": ":اختر الدولة",
+  "contact.country.placeholder": "اختر دولة",
+  "contact.country.us": "أمريكا",
+  "contact.country.sd": "السودان",
+  "contact.country.ly": "ليبيا",
+
+  "contact.cards.location.title": "الموقع",
+  "contact.cards.location.line1": "باب بن عشير 82510",
+  "contact.cards.location.line2": "طرابلس، ليبيا",
+
+  "contact.cards.phone.title": "اتصل بنا",
+  "contact.cards.email.title": "ايميل",
+
+  "contact.mapAlt": "خريطة السودان والدول المجاورة",
+
+  "contact.form.title": ":تواصل معنا عبر الإيميل",
+  "contact.form.nameLabel": ":الاسم",
+  "contact.form.namePh": "اكتب الاسم...",
+  "contact.form.emailLabel": ":البريد",
+  "contact.form.emailPh": "اكتب البريد...",
+  "contact.form.messageLabel": ":الرسالة",
+  "contact.form.messagePh": "اكتب رسالة...",
+  "contact.form.send": "إرسال"
 }

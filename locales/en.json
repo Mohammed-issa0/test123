@@ -115,5 +115,30 @@
   "footer.contact.email": "Info@Smilesofhope.Example.Org",
   "footer.contact.address": "123 Hope Lane, Suite 10, Everdale, Aurora County 018\nCountry Of Everland",
 
-  "footer.copyright": "All Rights Reserved."
+  "footer.copyright": "All Rights Reserved.",
+
+  "contact.title": "Our Centers & Contact Info",
+  "contact.country.label": "Select Country:",
+  "contact.country.placeholder": "Choose a country",
+  "contact.country.us": "United States",
+  "contact.country.sd": "Sudan",
+  "contact.country.ly": "Libya",
+
+  "contact.cards.location.title": "Location",
+  "contact.cards.location.line1": "Bab Bin Ashir 82510",
+  "contact.cards.location.line2": "Tripoli, Libya",
+
+  "contact.cards.phone.title": "Call Us",
+  "contact.cards.email.title": "Email",
+
+  "contact.mapAlt": "Map showing Sudan and nearby countries",
+
+  "contact.form.title": "Contact Us By Email:",
+  "contact.form.nameLabel": "Name:",
+  "contact.form.namePh": "Type your name...",
+  "contact.form.emailLabel": "Email:",
+  "contact.form.emailPh": "Type your email...",
+  "contact.form.messageLabel": "Message:",
+  "contact.form.messagePh": "Write a message...",
+  "contact.form.send": "Send"
 }
