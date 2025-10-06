@@ -1,9 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Analytics } from "@vercel/analytics/next";
-import { Suspense } from "react";
+
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-provider";
 
@@ -21,13 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="ltr">
-      <body className={`raleway ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>
-          <LanguageProvider>
-            {children}
-            <Analytics />
-          </LanguageProvider>
-        </Suspense>
+      <body className={`raleway overflow-x-hidden`}>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

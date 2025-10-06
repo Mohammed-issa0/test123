@@ -5,7 +5,7 @@ import { FaWhatsapp, FaSnapchat, FaXTwitter } from "react-icons/fa6";
 import logoL from "@/public/imgs/logoL.png";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-provider";
-
+import Link from "next/link";
 export function Footer() {
   const { t } = useLanguage();
 
@@ -68,6 +68,14 @@ export function Footer() {
                 >
                   {t("footer.about.store")}
                 </a>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

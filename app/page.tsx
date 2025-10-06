@@ -8,6 +8,7 @@ import { Partners } from "@/components/partners";
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import Implementers from "@/components/implementers";
+
 import { useLanguage } from "@/contexts/language-provider";
 export default function HomePage() {
   return (
