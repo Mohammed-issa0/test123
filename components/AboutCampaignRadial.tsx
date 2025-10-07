@@ -5,9 +5,22 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Heart, Droplet, Utensils, Cross, Users, BookOpen } from "lucide-react";
+import {
+  Droplet,
+  Utensils,
+  Cross,
+  Users,
+  BookOpen,
+  Goal,
+  Heart,
+  MessageSquare,
+  Eye,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/language-provider";
-
+import cam1 from "@/public/cam1.png";
+import cam2 from "@/public/cam2.png";
+import cam3 from "@/public/cam3.png";
+import cam4 from "@/public/cam4.png";
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -25,43 +38,28 @@ export default function AboutCampaignRadial() {
   // Build items from translation keys (flat, predictable)
   const items = [
     {
-      id: "mission",
-      title: t("about.campaign.mission.title"),
-      copy: t("about.campaign.mission.copy"),
-      side: "left" as const,
-      angle: -50, // 10 o'clock
-      Icon: BookOpen,
-    },
-    {
       id: "goals",
       title: t("about.campaign.goals.title"),
       copy: t("about.campaign.goals.copy"),
       side: "right" as const,
-      angle: 35, // 2 o'clock
-      Icon: Utensils,
+      angle: -45, // 2 o'clock
+      Icon: Goal,
     },
     {
       id: "services",
       title: t("about.campaign.services.title"),
       copy: t("about.campaign.services.copy"),
       side: "left" as const,
-      angle: -120, // 8 o'clock
+      angle: -140, // 8 o'clock
       Icon: Users,
     },
-    {
-      id: "vision",
-      title: t("about.campaign.vision.title"),
-      copy: t("about.campaign.vision.copy"),
-      side: "right" as const,
-      angle: 120, // 4 o'clock
-      Icon: Cross,
-    },
+
     {
       id: "values",
       title: t("about.campaign.values.title"),
       copy: t("about.campaign.values.copy"),
       side: "left" as const,
-      angle: -160, // 7 o'clock
+      angle: -180, // 7 o'clock
       Icon: Heart,
     },
     {
@@ -69,8 +67,24 @@ export default function AboutCampaignRadial() {
       title: t("about.campaign.who.title"),
       copy: t("about.campaign.who.copy"),
       side: "right" as const,
-      angle: 165, // 5 o'clock
+      angle: 135, // 5 o'clock
       Icon: Droplet,
+    },
+    {
+      id: "vision",
+      title: t("about.campaign.vision.title"),
+      copy: t("about.campaign.vision.copy"),
+      side: "left" as const,
+      angle: 45, // 5 o'clock
+      Icon: Eye,
+    },
+    {
+      id: "mission",
+      title: t("about.campaign.mission.title"),
+      copy: t("about.campaign.mission.copy"),
+      side: "right" as const,
+      angle: 0, // 5 o'clock
+      Icon: Goal,
     },
   ];
 
@@ -154,7 +168,7 @@ export default function AboutCampaignRadial() {
               {/* center mark */}
               <div className="absolute inset-0 grid place-items-center">
                 <Image
-                  src="/logo-mark.svg"
+                  src="/imgs/bigLogo.png"
                   alt={t("about.campaign.logoAlt")}
                   width={160}
                   height={160}
@@ -201,12 +215,12 @@ export default function AboutCampaignRadial() {
             {items
               .filter((i) => i.side === "right")
               .map(({ id, title, copy }) => (
-                <motion.div key={id} {...fadeInUp} className="text-right">
+                <motion.div key={id} {...fadeInUp} className="">
                   <h3 className="text-[#1E4A86] text-2xl font-bold mb-2">
-                    {title}{" "}
                     <span className="ml-1">
                       <Diamond />
                     </span>
+                    {title}{" "}
                   </h3>
                   <p className="text-gray-600 leading-relaxed max-w-sm text-sm ml-auto">
                     {copy}
