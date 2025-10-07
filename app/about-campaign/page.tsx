@@ -106,39 +106,126 @@ export default function AboutCampaignPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-6 md:gap-8"
           >
-            {[1, 2, 3, 4].map((i) => (
-              <motion.div
-                key={i}
-                variants={fadeInUp}
-                whileHover={{ y: -8, transition: { duration: 0.25 } }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
-              >
-                <div className="grid md:grid-cols-2 gap-4 p-6">
-                  <div className="flex flex-col justify-center">
-                    <div className="w-16 h-16 mb-4 bg-[#00A3E0] rounded-full flex items-center justify-center">
-                      {i === 1 && <Heart className="w-8 h-8 text-white" />}
-                      {i === 2 && <Utensils className="w-8 h-8 text-white" />}
-                      {i === 3 && <Cross className="w-8 h-8 text-white" />}
-                      {i === 4 && <Droplet className="w-8 h-8 text-white" />}
-                    </div>
-                    <h3 className="text-lg md:text-xl font-bold mb-2">
-                      {t(`about.offers.item${i}.title`)}
-                    </h3>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                      {t(`about.offers.item${i}.description`)}
-                    </p>
+            {/* 1) نص ثم صورة */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, transition: { duration: 0.25 } }}
+              className=" overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2 gap-4 p-6 ">
+                {/* النص */}
+                <div className="flex bg-blue-200 flex-col justify-center items-center md:order-1 text-center p-3">
+                  <div className="w-16 h-16 mb-4 bg-[#00A3E0] rounded-full flex items-center justify-center">
+                    <Heart className="w-8 h-8 text-white" />
                   </div>
-                  <div className="relative h-40 sm:h-48 md:h-full rounded-lg overflow-hidden">
-                    <Image
-                      src={`/imgs/about-cam${i}.png`}
-                      alt={t(`about.offers.item${i}.title`)}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">
+                    {t("about.offers.item1.title")}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    {t("about.offers.item1.description")}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+
+                {/* الصورة */}
+                <div className="relative h-40 sm:h-48 md:h-full  overflow-hidden md:order-2">
+                  <Image
+                    src="/cam1.png"
+                    alt={t("about.offers.item1.title")}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 2) صورة ثم نص */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, transition: { duration: 0.25 } }}
+              className=" overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2 p-6 gap-4 ">
+                {/* النص */}
+                <div className="flex bg-blue-200 flex-col items-center justify-center md:order-2 text-center p-3">
+                  <div className="w-16 h-16 mb-4 bg-[#00A3E0] rounded-full flex items-center justify-center">
+                    <Utensils className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">
+                    {t("about.offers.item2.title")}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    {t("about.offers.item2.description")}
+                  </p>
+                </div>
+                {/* الصورة أولاً على الشاشات الكبيرة */}
+                <div className="relative h-40 sm:h-48 md:h-full  overflow-hidden md:order-2">
+                  <Image
+                    src="/cam2.png"
+                    alt={t("about.offers.item2.title")}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 3) نص ثم صورة */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, transition: { duration: 0.25 } }}
+              className="overflow-hidden"
+            >
+              <div className=" grid md:grid-cols-2 gap-4 p-6 items-center">
+                <div className="relative h-40 sm:h-48 md:h-full  overflow-hidden md:order-2">
+                  <Image
+                    src="/cam3.png"
+                    alt={t("about.offers.item3.title")}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex p-3 bg-blue-200 flex-col items-center justify-center md:order-2 text-center">
+                  <div className="w-16 h-16 mb-4 bg-[#00A3E0] rounded-full flex items-center justify-center">
+                    <Cross className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">
+                    {t("about.offers.item3.title")}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    {t("about.offers.item3.description")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 4) صورة ثم نص */}
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ y: -8, transition: { duration: 0.25 } }}
+              className="overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2 gap-4 p-6">
+                <div className="relative h-40 sm:h-48 md:h-full  overflow-hidden md:order-1">
+                  <Image
+                    src="/cam4.png"
+                    alt={t("about.offers.item4.title")}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex p-3 flex-col items-center justify-center md:order-2 text-center bg-blue-200">
+                  <div className="w-16 h-16 mb-4 bg-[#00A3E0] rounded-full flex items-center justify-center">
+                    <Droplet className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2">
+                    {t("about.offers.item4.title")}
+                  </h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    {t("about.offers.item4.description")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </motion.section>
@@ -200,11 +287,14 @@ export default function AboutCampaignPage() {
                 key={i}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white rounded-lg shadow-lg p-5 flex flex-col md:flex-row items-center gap-4"
+                className="bg-white rounded-2xl shadow-lg p-5 flex flex-col md:flex-row items-center gap-4 border border-gray-100"
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-[#B8D8E8] rounded-lg grid place-items-center flex-shrink-0">
-                  <User className="w-7 h-7 md:w-8 md:h-8 text-[#00538C]" />
+                {/* أيقونة الشخص */}
+                <div className="w-16 h-16 bg-gradient-to-br from-[#B8D8E8] to-[#A2CBE2] rounded-2xl grid place-items-center flex-shrink-0 shadow-inner">
+                  <User className="w-8 h-8 text-[#00538C]" />
                 </div>
+
+                {/* النص */}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base md:text-lg font-bold mb-1 truncate">
                     {t("about.cases.item.name")}
@@ -216,11 +306,15 @@ export default function AboutCampaignPage() {
                     {t("about.cases.item.paragraph")}
                   </p>
                 </div>
-                <button className="w-10 h-10 md:w-12 md:h-12 bg-[#00A3E0] rounded-full grid place-items-center flex-shrink-0">
+
+                {/* زر التسجيل (play/pause) */}
+                <button className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#00A3E0] to-[#0077B6] flex items-center justify-center shadow-md active:scale-95 transition">
+                  {/* الحلقات الخارجية كأنها موجة تسجيل */}
+                  <span className="absolute inset-0 rounded-full border-2 border-[#00A3E0] opacity-50 "></span>
                   {i % 2 === 0 ? (
-                    <Pause className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    <Pause className="w-6 h-6 md:w-7 md:h-7 text-white relative z-10" />
                   ) : (
-                    <Play className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    <Play className="w-6 h-6 md:w-7 md:h-7 text-white relative z-10" />
                   )}
                 </button>
               </motion.div>
