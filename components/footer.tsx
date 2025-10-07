@@ -44,6 +44,22 @@ export function Footer() {
                   {t("footer.support.terms")}
                 </a>
               </li>
+              <li>
+                <Link
+                  href="/partners"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/seminars"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  Seminars
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -68,6 +84,14 @@ export function Footer() {
                 >
                   {t("footer.about.store")}
                 </a>
+              </li>
+              <li>
+                <Link
+                  href="/about-campaign"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  About the Campaign
+                </Link>
               </li>
               <li>
                 <Link
