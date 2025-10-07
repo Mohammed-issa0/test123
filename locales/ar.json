@@ -139,5 +139,144 @@
   "contact.form.emailPh": "اكتب البريد...",
   "contact.form.messageLabel": ":الرسالة",
   "contact.form.messagePh": "اكتب رسالة...",
-  "contact.form.send": "إرسال"
+  "contact.form.send": "إرسال",
+
+  "partners.title": "شركاء الحملة",
+  "partners.subtitle": "نسعى مع شركائنا لتحقيق التغيير ودعم المحتاجين من خلال مشاريع تنموية وإنسانية مستدامة.",
+
+  "partners.siemens.name": "سيمنس",
+  "partners.siemens.headline": "من الجوع إلى الأمل",
+  "partners.siemens.description": "تعمل شركة سيمنس مع الحملة لتقديم الدعم التقني واللوجستي لتعزيز قدرات المجتمعات المحلية.",
+
+  "partners.capAccredited.name": "مختبرات CAP المعتمدة",
+  "partners.capAccredited.headline": "من الجوع إلى الأمل",
+  "partners.capAccredited.description": "تسهم مختبرات CAP في ضمان جودة الخدمات الطبية المقدمة ضمن برامج الرعاية الصحية للحملة.",
+
+  "partners.ministryEducation.name": "وزارة التعليم",
+  "partners.ministryEducation.headline": "من الجوع إلى الأمل",
+  "partners.ministryEducation.description": "تعمل الوزارة على دعم برامج التعليم وإعادة الأطفال إلى المدارس في المناطق المتضررة.",
+
+  "partners.ministryHealth.name": "وزارة الصحة",
+  "partners.ministryHealth.headline": "من الجوع إلى الأمل",
+  "partners.ministryHealth.description": "تدعم الوزارة المبادرات الطبية وتوفير الرعاية الصحية للمحتاجين والمتضررين.",
+
+  "partners.bacsRiyadh.name": "مشروع باكس مترو الرياض",
+  "partners.bacsRiyadh.headline": "من الجوع إلى الأمل",
+  "partners.bacsRiyadh.description": "يساهم مشروع مترو الرياض في توفير الدعم اللوجستي لمبادرات النقل والمساعدة الإنسانية.",
+
+  "partners.beckmanCoulter.name": "بيكمان كولتر",
+  "partners.beckmanCoulter.headline": "من الجوع إلى الأمل",
+  "partners.beckmanCoulter.description": "تقدم شركة بيكمان كولتر تقنيات مخبرية متطورة لدعم برامج الصحة العامة.",
+
+  "partners.alRajhiBank.name": "مصرف الراجحي",
+  "partners.alRajhiBank.headline": "من الجوع إلى الأمل",
+  "partners.alRajhiBank.description": "يشارك مصرف الراجحي في تمويل المشاريع الإنسانية ودعم المبادرات المجتمعية المستدامة.",
+
+  "partners.saudiElectricity.name": "الشركة السعودية للكهرباء",
+  "partners.saudiElectricity.headline": "من الجوع إلى الأمل",
+  "partners.saudiElectricity.description": "تساهم الشركة السعودية للكهرباء في توفير الطاقة للمرافق الحيوية ودعم مشاريع التنمية.",
+
+  "seminars.title": "الندوات",
+  "seminars.subtitle": "تتناول هذه الندوات موضوعات متنوعة وتعرض شهادات وتجارب مباشرة من الميدان بهدف نشر المعرفة وإبراز الأثر المجتمعي.",
+  "seminars.certificatesTitle": "شهادات من الميدان",
+
+  "seminars.item1.date": "10/12/2025",
+  "seminars.item1.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item1.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item2.date": "10/12/2025",
+  "seminars.item2.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item2.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item3.date": "10/12/2025",
+  "seminars.item3.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item3.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام. كويز...",
+
+  "seminars.item4.date": "10/12/2025",
+  "seminars.item4.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item4.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item5.date": "10/12/2025",
+  "seminars.item5.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item5.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item6.date": "10/12/2025",
+  "seminars.item6.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item6.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item7.date": "10/12/2025",
+  "seminars.item7.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item7.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item8.date": "10/12/2025",
+  "seminars.item8.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item8.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.item9.date": "10/12/2025",
+  "seminars.item9.title": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت،",
+  "seminars.item9.description": "سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه إت دولوري ماجنا أليكوا. أوت إنيم أد مينيم فينيام، كويز...",
+
+  "seminars.watch": "مشاهدة الفيديو",
+  "seminars.details": "التفاصيل",
+
+  "about.title.city": "عن مدينة الفاشر",
+  "about.description.city": "الفاشر، عاصمة ولاية شمال دارفور في غرب السودان، مدينة تاريخية ذات عمق ثقافي واجتماعي كبير، وتعود أهميتها إلى قرون طويلة عندما كانت عاصمة سلطنة دارفور.",
+
+  "about.section.campaign": "عن الحملة",
+
+  "about.offers.title": "ما الذي تقدمه الحملة",
+  "about.offers.item1.title": "الدعم النفسي للنساء والفتيات",
+  "about.offers.item1.description": "تقديم المستلزمات الدراسية ودعم الأطفال للعودة إلى المدارس وبناء مستقبل أفضل.",
+  "about.offers.item2.title": "السلال الغذائية",
+  "about.offers.item2.description": "تقديم المستلزمات الدراسية ودعم الأطفال للعودة إلى المدارس وبناء مستقبل أفضل.",
+  "about.offers.item3.title": "الرعاية الطبية",
+  "about.offers.item3.description": "تقديم المستلزمات الدراسية ودعم الأطفال للعودة إلى المدارس وبناء مستقبل أفضل.",
+  "about.offers.item4.title": "المياه النظيفة",
+  "about.offers.item4.description": "تقديم المستلزمات الدراسية ودعم الأطفال للعودة إلى المدارس وبناء مستقبل أفضل.",
+
+  "about.stats.item1": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت، سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه.",
+  "about.stats.item2": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت، سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه.",
+  "about.stats.item3": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت، سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه.",
+  "about.stats.item4": "لوريم إيبسوم دولور سِت أميت، كونسيكتيتور أدبيسّينغ إليت، سيد دو إيوسمد تيمبور إنسيديدنت أوت لابوريه.",
+
+  "about.cases.title": "الحالات",
+  "about.cases.item.name": "اسم الحالة",
+  "about.cases.item.context": "نبذة قصيرة عن الحالة",
+  "about.cases.item.paragraph": "يتم وضع الفقرة التفصيلية هنا",
+
+  "about.partners.title": "شركاؤنا في هذه الحملة",
+
+  "about.partners.list.0": "سيمنس",
+  "about.partners.list.1": "CAP المعتمدة",
+  "about.partners.list.2": "وزارة التعليم",
+  "about.partners.list.3": "وزارة الصحة",
+  "about.partners.list.4": "مشروع باكس مترو الرياض",
+  "about.partners.list.5": "بيكمان كولتر",
+  "about.partners.list.6": "مصرف الراجحي",
+  "about.partners.list.7": "الشركة السعودية للكهرباء",
+  "about.partners.list.8": "سينتك",
+
+  "about.campaign.heading": "عن الحملة",
+  "about.campaign.logoAlt": "شعار الحملة",
+
+  "about.campaign.mission.title": "رسالتنا",
+  "about.campaign.mission.copy": "أهدافنا رؤيتنا من نحن رسالتنا قيمنا خدماتنا رسالتنا ...",
+
+  "about.campaign.goals.title": "أهدافنا",
+  "about.campaign.goals.copy": "دعم المتضررين، دعم التعليم، خلق فرص عمل، وتعزيز قيم التكافل.",
+
+  "about.campaign.services.title": "خدماتنا",
+  "about.campaign.services.copy": "إغاثة عاجلة، تعليم، توظيف، ودعم نفسي اجتماعي.",
+
+  "about.campaign.vision.title": "رؤيتنا",
+  "about.campaign.vision.copy": "مجتمع متماسك يجد فيه كل إنسان حقه في التعليم والمأوى والكرامة.",
+
+  "about.campaign.values.title": "قيمنا",
+  "about.campaign.values.copy": "الإنسانية، الشفافية، التعاون، والأمل.",
+
+  "about.campaign.who.title": "من نحن",
+  "about.campaign.who.copy": "منظمة إنسانية غير ربحية تدعم المتضررين في مدينة الفاشر من خلال برامج الإغاثة والتنمية.",
+
+  "about.campaign.message.title": "رسالتنا",
+  "about.campaign.message.copy": "تقديم دعم فعّال للأسر المتضررة بشفافية وبالتعاون مع الشركاء الإنسانيين."
 }

@@ -140,5 +140,143 @@
   "contact.form.emailPh": "Type your email...",
   "contact.form.messageLabel": "Message:",
   "contact.form.messagePh": "Write a message...",
-  "contact.form.send": "Send"
+  "contact.form.send": "Send",
+
+  "partners.title": "Campaign Partners",
+  "partners.subtitle": "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.siemens.name": "SIEMENS",
+  "partners.siemens.headline": "From Hunger To Hope",
+  "partners.siemens.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.capAccredited.name": "CAP ACCREDITED",
+  "partners.capAccredited.headline": "From Hunger To Hope",
+  "partners.capAccredited.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.ministryEducation.name": "Ministry of Education",
+  "partners.ministryEducation.headline": "From Hunger To Hope",
+  "partners.ministryEducation.description": "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.ministryHealth.name": "Ministry of Health",
+  "partners.ministryHealth.headline": "From Hunger To Hope",
+  "partners.ministryHealth.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+
+  "partners.bacsRiyadh.name": "BACS RIYADH METRO PROJECT",
+  "partners.bacsRiyadh.headline": "From Hunger To Hope",
+  "partners.bacsRiyadh.description": "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.beckmanCoulter.name": "BECKMAN COULTER",
+  "partners.beckmanCoulter.headline": "From Hunger To Hope",
+  "partners.beckmanCoulter.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+
+  "partners.alRajhiBank.name": "alrajhi bank",
+  "partners.alRajhiBank.headline": "From Hunger To Hope",
+  "partners.alRajhiBank.description": "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+
+  "partners.saudiElectricity.name": "Saudi Electricity Company",
+  "partners.saudiElectricity.headline": "From Hunger To Hope",
+  "partners.saudiElectricity.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+
+  "seminars.title": "Seminars",
+  "seminars.subtitle": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.",
+  "seminars.certificatesTitle": "Certificates From The Field",
+
+  "seminars.item1.date": "10/12/2025",
+  "seminars.item1.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item1.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item2.date": "10/12/2025",
+  "seminars.item2.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item2.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item3.date": "10/12/2025",
+  "seminars.item3.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item3.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim veniam. Quis...",
+
+  "seminars.item4.date": "10/12/2025",
+  "seminars.item4.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item4.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item5.date": "10/12/2025",
+  "seminars.item5.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item5.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item6.date": "10/12/2025",
+  "seminars.item6.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item6.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item7.date": "10/12/2025",
+  "seminars.item7.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item7.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item8.date": "10/12/2025",
+  "seminars.item8.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item8.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.item9.date": "10/12/2025",
+  "seminars.item9.title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,",
+  "seminars.item9.description": "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis...",
+
+  "seminars.watch": "Watch video",
+  "seminars.details": "Details",
+
+  "about.title.city": "About The City Of El Fasher",
+  "about.description.city": "El Fasher, the capital of North Darfur State in western Sudan, is a historic city with significant cultural and social depth. Its importance dates back centuries as the capital of the Darfur Sultanate.",
+
+  "about.section.campaign": "About The Campaign",
+
+  "about.offers.title": "What The Campaign Offers",
+  "about.offers.item1.title": "Psychological Support For Women And Girls",
+  "about.offers.item1.description": "Providing school supplies and supporting children to return to school and build a better future.",
+  "about.offers.item2.title": "Food Baskets",
+  "about.offers.item2.description": "Providing school supplies and supporting children to return to school and build a better future.",
+  "about.offers.item3.title": "Medical Care",
+  "about.offers.item3.description": "Providing school supplies and supporting children to return to school and build a better future.",
+  "about.offers.item4.title": "Clean Water",
+  "about.offers.item4.description": "Providing school supplies and supporting children to return to school and build a better future.",
+
+  "about.stats.item1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  "about.stats.item2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  "about.stats.item3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  "about.stats.item4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+
+  "about.cases.title": "Cases",
+  "about.cases.item.name": "case name",
+  "about.cases.item.context": "a little of context",
+  "about.cases.item.paragraph": "paragraph goes here",
+
+  "about.partners.title": "Our Partners In This Campaign",
+  "about.partners.list.0": "SIEMENS",
+  "about.partners.list.1": "CAP ACCREDITED",
+  "about.partners.list.2": "Ministry of Education",
+  "about.partners.list.3": "Ministry of Health",
+  "about.partners.list.4": "BACS RIYADH METRO",
+  "about.partners.list.5": "BECKMAN COULTER",
+  "about.partners.list.6": "alrajhi bank",
+  "about.partners.list.7": "Saudi Electricity Company",
+  "about.partners.list.8": "SYNTECH",
+
+  "about.campaign.heading": "About The Campaign",
+  "about.campaign.logoAlt": "Campaign mark",
+
+  "about.campaign.mission.title": "Our Mission",
+  "about.campaign.mission.copy": "Our GoalsOur VisionWho We AreOur MessageOur ValuesOur ServicesOur Mission ...",
+
+  "about.campaign.goals.title": "Our Goals",
+  "about.campaign.goals.copy": "Supporting those affected, supporting education, creating job opportunities, and promoting the values of solidarity.",
+
+  "about.campaign.services.title": "Our Services",
+  "about.campaign.services.copy": "Urgent relief, education, employment, and psychosocial support.",
+
+  "about.campaign.vision.title": "Our Vision",
+  "about.campaign.vision.copy": "A cohesive society where every person finds their right to education, shelter, and dignity.",
+
+  "about.campaign.values.title": "Our Values",
+  "about.campaign.values.copy": "Humanity, transparency, cooperation, and hope.",
+
+  "about.campaign.who.title": "Who We Are",
+  "about.campaign.who.copy": "A non-profit humanitarian organization that supports those affected in the city of El Fasher through relief and development.",
+
+  "about.campaign.message.title": "Our Message",
+  "about.campaign.message.copy": "Delivering effective support to affected families transparently and in collaboration with humanitarian partners."
 }
