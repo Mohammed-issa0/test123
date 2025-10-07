@@ -110,7 +110,7 @@ export default function AboutCampaignRadial() {
             <div className="absolute inset-[20%] rounded-full border border-[#D7E6EF]" />
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src="/imgs/bigLogo.png"
+                src={logo}
                 alt={t("about.campaign.logoAlt")}
                 width={120}
                 height={120}
@@ -246,4 +246,5 @@ export default function AboutCampaignRadial() {
     </section>
   );
 }
+
 
