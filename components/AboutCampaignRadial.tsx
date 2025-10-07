@@ -21,6 +21,7 @@ import cam1 from "@/public/cam1.png";
 import cam2 from "@/public/cam2.png";
 import cam3 from "@/public/cam3.png";
 import cam4 from "@/public/cam4.png";
+import logo from "@/public/imgs/bigLogo.png";
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -168,7 +169,7 @@ export default function AboutCampaignRadial() {
               {/* center mark */}
               <div className="absolute inset-0 grid place-items-center">
                 <Image
-                  src="/imgs/bigLogo.png"
+                  src={logo}
                   alt={t("about.campaign.logoAlt")}
                   width={160}
                   height={160}
@@ -245,3 +246,4 @@ export default function AboutCampaignRadial() {
     </section>
   );
 }
+
