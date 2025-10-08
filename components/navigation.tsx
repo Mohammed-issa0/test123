@@ -122,30 +122,30 @@ export function Navigation() {
         </div>
 
         <div className="p-5 flex flex-col gap-5 text-[#061923] text-base font-medium">
-         <a
-          href="/plans-programs"
-          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
-        >
-          {t("support.plansPrograms")}
-        </a>
-         <a
-          href="about-campaign"
-          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
-        >
-          {t("about.campaign")}
-        </a>
-          <a
-          href="/el-fasher"
-          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
-        >
-          {t("about.elfasher")}
-        </a>
-         <a
-          href="/contact  "
-          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
-        >
-          {t("about.contact")}
-        </a>
+          <Link
+            href="/plans-programs"
+            className="block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+          >
+            {t("support.plansPrograms")}
+          </Link>
+          <Link
+            href="about-campaign"
+            className="block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+          >
+            {t("about.campaign")}
+          </Link>
+          <Link
+            href="/el-fasher"
+            className="block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+          >
+            {t("about.elfasher")}
+          </Link>
+          <Link
+            href="/contact  "
+            className="block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+          >
+            {t("about.contact")}
+          </Link>
 
           <hr className="border-[#D8F1FD]" />
           <Link href="/donate">
