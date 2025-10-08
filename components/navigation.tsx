@@ -122,34 +122,30 @@ export function Navigation() {
         </div>
 
         <div className="p-5 flex flex-col gap-5 text-[#061923] text-base font-medium">
+         <a
+          href="/plans-programs"
+          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+        >
+          {t("support.plansPrograms")}
+        </a>
+         <a
+          href="about-campaign"
+          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+        >
+          {t("about.campaign")}
+        </a>
           <a
-            href="#campaign"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#00A3E0] transition-colors"
-          >
-            {t("nav.campaign")}
-          </a>
-          <a
-            href="#media"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#00A3E0] transition-colors"
-          >
-            {t("nav.media")}
-          </a>
-          <a
-            href="#projects"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#00A3E0] transition-colors"
-          >
-            {t("nav.projects")}
-          </a>
-          <a
-            href="#implementers"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#00A3E0] transition-colors"
-          >
-            {t("nav.implementers")}
-          </a>
+          href="/el-fasher"
+          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+        >
+          {t("about.elfasher")}
+        </a>
+         <a
+          href="/contact  "
+          className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
+        >
+          {t("about.contact")}
+        </a>
 
           <hr className="border-[#D8F1FD]" />
           <Link href="/donate">
