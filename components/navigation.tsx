@@ -46,17 +46,17 @@ export function Navigation() {
 
         {/* روابط الديسكتوب */}
         <a
-          href="#media"
+          href="/plans-programs"
           className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
         >
-          {t("nav.media")}
+          {t("support.plansPrograms")}
         </a>
 
         <a
-          href="#campaign"
+          href="about-campaign"
           className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
         >
-          {t("nav.campaign")}
+          {t("about.campaign")}
         </a>
 
         {/* الشعار */}
@@ -65,17 +65,17 @@ export function Navigation() {
         </Link>
 
         <a
-          href="#projects"
+          href="/el-fasher"
           className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
         >
-          {t("nav.projects")}
+          {t("about.elfasher")}
         </a>
 
         <a
-          href="#implementers"
+          href="/contact  "
           className="hidden md:block text-[#061923] text-base font-medium hover:text-[#00A3E0] transition-colors"
         >
-          {t("nav.implementers")}
+          {t("about.contact")}
         </a>
 
         {/* زر التبرع */}

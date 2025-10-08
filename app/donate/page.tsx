@@ -13,18 +13,38 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/language-provider";
 
 export default function DonatePage() {
   const [donationType, setDonationType] = useState<"once" | "monthly">("once");
   const [amount, setAmount] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<
+    "bank" | "visa" | "paypal"
+  >("bank");
+  const router = useRouter();
+  const { t, lang } = useLanguage();
+  const isArabic = (lang || "").startsWith("ar");
+
+  const handleSubmit = () => {
+    if (!amount || Number(amount) <= 0) return;
+    if (paymentMethod === "bank") {
+      router.push(`/bank-transfer`);
+    }
+  };
+
+  const ComingSoonBadge = () => (
+    <span className="ml-2 inline-flex items-center rounded bg-gray-200 px-2 py-0.5 text-[10px] font-bold text-gray-700">
+      {t("donate.soon")}
+    </span>
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      <main className="flex-1 bg-white">
+      <main className="flex-1 bg-white" dir={isArabic ? "rtl" : "ltr"}>
         <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
           {/* Title */}
           <motion.div
@@ -35,7 +55,7 @@ export default function DonatePage() {
           >
             <h1 className="text-3xl md:text-4xl font-bold text-[#061923] mb-2 flex items-center justify-center gap-3">
               <span className="text-[#F5A623]">◆</span>
-              حملة الأمل لأهل الفاشر
+              {t("donate.title1")}
               <span className="text-[#F5A623]">◆</span>
             </h1>
           </motion.div>
@@ -55,7 +75,7 @@ export default function DonatePage() {
                   : "bg-[#E8F7FC] text-[#00A3E0]"
               }`}
             >
-              التبرع مرة فقط
+              {t("donate.tabs.once")}
             </button>
             <button
               onClick={() => setDonationType("monthly")}
@@ -65,7 +85,7 @@ export default function DonatePage() {
                   : "bg-[#E8F7FC] text-[#00A3E0]"
               }`}
             >
-              شهرياً
+              {t("donate.tabs.monthly")}
             </button>
           </motion.div>
 
@@ -77,119 +97,146 @@ export default function DonatePage() {
             className="space-y-6"
           >
             {/* Donation Purpose */}
-            <div className="text-right">
+            <div className={isArabic ? "text-right" : "text-left"}>
               <label className="block text-[#061923] font-semibold mb-2">
-                :تبرع من اجل
+                {t("donate.purpose.label")}
               </label>
               <Select>
-                <SelectTrigger className="w-full text-right">
-                  <SelectValue placeholder="اختر المشروع" />
+                <SelectTrigger
+                  className={`w-full ${isArabic ? "text-right" : "text-left"}`}
+                >
+                  <SelectValue placeholder={t("donate.purpose.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="water">مياه نظيفة</SelectItem>
-                  <SelectItem value="food">سلال غذائية</SelectItem>
-                  <SelectItem value="medical">رعاية طبية</SelectItem>
+                  <SelectItem value="water">
+                    {t("donate.purpose.options.water")}
+                  </SelectItem>
+                  <SelectItem value="food">
+                    {t("donate.purpose.options.food")}
+                  </SelectItem>
+                  <SelectItem value="medical">
+                    {t("donate.purpose.options.medical")}
+                  </SelectItem>
                   <SelectItem value="support">
-                    دعم نفسي للنساء والفتيات
+                    {t("donate.purpose.options.support")}
                   </SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             {/* Amount Selection */}
-            <div className="text-right">
+            <div className={isArabic ? "text-right" : "text-left"}>
               <label className="block text-[#061923] font-semibold mb-2">
-                اختر المبلغ
+                {t("donate.amount.label")}
               </label>
               <div className="flex gap-3">
                 <Input
                   type="number"
-                  placeholder="ادخل مبلغ اخر"
+                  placeholder={t("donate.amount.placeholder")}
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="flex-1 text-right"
-                  dir="rtl"
+                  className={`flex-1 ${isArabic ? "text-right" : "text-left"}`}
+                  dir={isArabic ? "rtl" : "ltr"}
+                  min={1}
                 />
                 <Button
                   onClick={() => setAmount("100")}
                   className="bg-[#00A3E0] hover:bg-[#0088BD] text-white px-6"
+                  type="button"
                 >
-                  $100
+                  {t("donate.amount.quick100")}
                 </Button>
               </div>
             </div>
 
             {/* Optional Note */}
-            <div className="text-right">
+            <div className={isArabic ? "text-right" : "text-left"}>
               <label className="block text-[#061923] font-semibold mb-2">
-                (اترك ملاحظة (اختياري
+                {t("donate.note.label")}
               </label>
               <Textarea
-                placeholder="اكتب رسالة..."
-                className="min-h-32 text-right"
-                dir="rtl"
+                placeholder={t("donate.note.placeholder")}
+                className={`min-h-32 ${isArabic ? "text-right" : "text-left"}`}
+                dir={isArabic ? "rtl" : "ltr"}
               />
             </div>
 
             {/* Payment Method */}
-            <div className="text-right">
+            <div className={isArabic ? "text-right" : "text-left"}>
               <label className="block text-[#061923] font-semibold mb-3">
-                اختر طريقة الدفع
+                {t("donate.payment.label")}
               </label>
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {/* VISA - disabled */}
                 <button
-                  onClick={() => setPaymentMethod("visa")}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    paymentMethod === "visa"
-                      ? "border-[#00A3E0] bg-[#E8F7FC]"
-                      : "border-gray-200 bg-white"
-                  }`}
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="p-4 rounded-lg border-2 border-gray-200 bg-gray-100 cursor-not-allowed relative"
                 >
-                  <div className="text-2xl font-bold text-[#1A1F71]">VISA</div>
-                </button>
-                <button
-                  onClick={() => setPaymentMethod("paypal")}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    paymentMethod === "paypal"
-                      ? "border-[#00A3E0] bg-[#E8F7FC]"
-                      : "border-gray-200 bg-white"
-                  }`}
-                >
-                  <div className="text-2xl font-bold text-[#003087]">
-                    PayPal
+                  <div className="text-2xl font-bold text-[#1A1F71] opacity-50">
+                    {t("donate.payment.methods.visa")}
+                  </div>
+                  <div
+                    className={`absolute top-2 ${
+                      isArabic ? "right-2" : "left-2"
+                    } text-[10px] font-bold bg-gray-200 text-gray-700 px-2 py-0.5 rounded`}
+                  >
+                    {t("donate.soon")}
                   </div>
                 </button>
+
+                {/* PayPal - disabled */}
                 <button
-                  onClick={() => setPaymentMethod("transfer")}
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="p-4 rounded-lg border-2 border-gray-200 bg-gray-100 cursor-not-allowed relative"
+                >
+                  <div className="text-2xl font-bold text-[#003087] opacity-50">
+                    {t("donate.payment.methods.paypal")}
+                  </div>
+                  <div
+                    className={`absolute top-2 ${
+                      isArabic ? "right-2" : "left-2"
+                    } text-[10px] font-bold bg-gray-200 text-gray-700 px-2 py-0.5 rounded`}
+                  >
+                    {t("donate.soon")}
+                  </div>
+                </button>
+
+                {/* Bank transfer - the only active method */}
+                <button
+                  type="button"
+                  onClick={() => setPaymentMethod("bank")}
                   className={`p-4 rounded-lg border-2 transition-all ${
-                    paymentMethod === "transfer"
+                    paymentMethod === "bank"
                       ? "border-[#00A3E0] bg-[#E8F7FC]"
                       : "border-gray-200 bg-white"
                   }`}
                 >
                   <div className="text-lg font-semibold text-[#061923]">
-                    حوالة
+                    {t("donate.payment.methods.bank")}
                   </div>
                 </button>
-                <button
-                  onClick={() => setPaymentMethod("card")}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    paymentMethod === "card"
-                      ? "border-[#00A3E0] bg-[#E8F7FC]"
-                      : "border-gray-200 bg-white"
-                  }`}
-                >
-                  <div className="text-lg font-semibold text-[#061923]">
-                    بطاقة
-                  </div>
-                </button>
+
+                {/* Placeholder fourth slot (optional) */}
+                <div className="p-4 rounded-lg border-2 border-transparent" />
               </div>
             </div>
 
             {/* Submit Button */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Button className="w-full bg-[#00A3E0] hover:bg-[#0088BD] text-white py-6 text-lg font-semibold rounded-lg">
-                التالي
+              <Button
+                type="button"
+                onClick={handleSubmit}
+                disabled={
+                  !amount || Number(amount) <= 0 || paymentMethod !== "bank"
+                }
+                className="w-full bg-[#00A3E0] hover:bg-[#0088BD] disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-not-allowed text-white py-6 text-lg font-semibold rounded-lg"
+              >
+                {t("donate.next")}
               </Button>
             </motion.div>
           </motion.div>

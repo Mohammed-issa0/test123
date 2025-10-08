@@ -6,6 +6,7 @@ import logoL from "@/public/imgs/logoL.png";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-provider";
 import Link from "next/link";
+
 export function Footer() {
   const { t } = useLanguage();
 
@@ -17,7 +18,7 @@ export function Footer() {
           {/* Logo */}
           <Image
             src={logoL}
-            alt="Smiles of Hope Logo"
+            alt={t("logoAlt")}
             height={40}
             className="mx-auto md:mx-0"
           />
@@ -25,31 +26,15 @@ export function Footer() {
           {/* Support Links */}
           <div className="text-center md:text-start">
             <h3 className="text-white text-lg font-semibold mb-3">
-              {t("footer.support.title")}
+              {t("support.title")}
             </h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
-                >
-                  {t("footer.support.privacy")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
-                >
-                  {t("footer.support.terms")}
-                </a>
-              </li>
               <li>
                 <Link
                   href="/partners"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Partners
+                  {t("support.partners")}
                 </Link>
               </li>
               <li>
@@ -57,8 +42,32 @@ export function Footer() {
                   href="/seminars"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Seminars
+                  {t("support.seminars")}
                 </Link>
+              </li>
+              <li>
+                <Link
+                  href="/plans-programs"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  {t("support.plansPrograms")}
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  {t("support.privacy")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  {t("support.terms")}
+                </a>
               </li>
             </ul>
           </div>
@@ -66,31 +75,15 @@ export function Footer() {
           {/* About Links */}
           <div className="text-center md:text-start">
             <h3 className="text-white text-lg font-semibold mb-3">
-              {t("footer.about.title")}
+              {t("about.title")}
             </h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
-                >
-                  {t("footer.about.mission")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
-                >
-                  {t("footer.about.store")}
-                </a>
-              </li>
               <li>
                 <Link
                   href="/about-campaign"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  About the Campaign
+                  {t("about.campaign")}
                 </Link>
               </li>
               <li>
@@ -98,7 +91,15 @@ export function Footer() {
                   href="/contact"
                   className="text-white hover:text-[#00A3E0] transition-colors text-sm"
                 >
-                  Contact Us
+                  {t("about.contact")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/el-fasher"
+                  className="text-white hover:text-[#00A3E0] transition-colors text-sm"
+                >
+                  {t("about.elfasher")}
                 </Link>
               </li>
             </ul>
@@ -150,16 +151,16 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="flex flex-col gap-1 text-sm text-white">
-              <p>{t("footer.contact.phone")}</p>
-              <p>{t("footer.contact.email")}</p>
-              <p className="leading-relaxed">{t("footer.contact.address")}</p>
+              <p>{t("contact.phone")}</p>
+              <p>{t("contact.email")}</p>
+              <p className="leading-relaxed">{t("contact.address")}</p>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="text-center text-white text-sm pt-8 border-t border-gray-700 mt-8">
-          © 2025 Smiles Of Hope Foundation. {t("footer.copyright")}
+          © 2025 Smiles Of Hope Foundation. {t("copyright")}
         </div>
       </div>
     </footer>

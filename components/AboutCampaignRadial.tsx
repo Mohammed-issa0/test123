@@ -1,6 +1,3 @@
-// AboutCampaignRadial.tsx (with i18n)
-// Radial section fully translated using useLanguage() with flat keys
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -16,12 +13,15 @@ import {
   MessageSquare,
   Eye,
 } from "lucide-react";
+import abc from "@/public/imgs/abc.png";
+import bigar from "@/public/imgs/bigar1.png";
+
 import { useLanguage } from "@/contexts/language-provider";
 import cam1 from "@/public/cam1.png";
 import cam2 from "@/public/cam2.png";
 import cam3 from "@/public/cam3.png";
 import cam4 from "@/public/cam4.png";
-
+import logo from "@/public/imgs/bigLogo.png";
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -88,6 +88,11 @@ export default function AboutCampaignRadial() {
       Icon: Goal,
     },
   ];
+  const { lang } = useLanguage();
+  const isArabic = (lang || "").startsWith("ar");
+
+  const imgSrc = isArabic ? bigar : abc;
+  const alt = isArabic ? t("image.alt.ar") : t("image.alt.en"); // أو نص ثابت
 
   return (
     <section className="px-4 sm:px-6 md:px-8 lg:px-10 py-14 md:py-20 bg-white">
@@ -110,7 +115,7 @@ export default function AboutCampaignRadial() {
             <div className="absolute inset-[20%] rounded-full border border-[#D7E6EF]" />
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src="/public/imgs/bigLogo.png"
+                src={logo}
                 alt={t("about.campaign.logoAlt")}
                 width={120}
                 height={120}
@@ -137,9 +142,11 @@ export default function AboutCampaignRadial() {
         </div>
 
         {/* Desktop / Tablet: radial layout */}
-        <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-10 items-center">
+        <div className="hidden md:block">
+          <Image src={imgSrc} alt={alt} className="w-full p-4" priority />
+
           {/* LEFT TEXTS */}
-          <div className="space-y-12">
+          {/* <div className="space-y-12">
             {items
               .filter((i) => i.side === "left")
               .map(({ id, title, copy }) => (
@@ -152,33 +159,33 @@ export default function AboutCampaignRadial() {
                   </p>
                 </motion.div>
               ))}
-          </div>
+          </div> */}
 
           {/* CIRCLE */}
-          <div className="relative mx-auto">
+          {/* <div className="relative mx-auto">
             <div className="relative w-[420px] h-[420px] lg:w-[460px] lg:h-[460px]">
               {/* main ring */}
-              <motion.div
+          {/* <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, type: "spring" }}
                 className="absolute inset-0 rounded-full border-[6px] border-[#00538C] shadow-[0_0_0_6px_rgba(0,83,140,0.06)]"
-              />
+              /> */}
 
-              {/* center mark */}
-              <div className="absolute inset-0 grid place-items-center">
+          {/* center mark */}
+          {/* <div className="absolute inset-0 grid place-items-center">
                 <Image
-                  src="/public/imgs/bigLogo.png"
+                  src={logo}
                   alt={t("about.campaign.logoAlt")}
                   width={160}
                   height={160}
                   className="opacity-95"
                 />
-              </div>
+              </div> */}
 
-              {/* orbiting small icon nodes */}
-              {items.map(({ id, angle, Icon }, idx) => (
+          {/* orbiting small icon nodes */}
+          {/* {items.map(({ id, angle, Icon }, idx) => (
                 <motion.div
                   key={id}
                   initial={{ opacity: 0, scale: 0.6 }}
@@ -207,12 +214,12 @@ export default function AboutCampaignRadial() {
                     <Icon className="w-5 h-5 text-[#00538C]" />
                   </motion.span>
                 </motion.div>
-              ))}
-            </div>
-          </div>
+              ))} */}
+          {/* </div> */}
+          {/* </div> */}
 
           {/* RIGHT TEXTS */}
-          <div className="space-y-12">
+          {/* <div className="space-y-12">
             {items
               .filter((i) => i.side === "right")
               .map(({ id, title, copy }) => (
@@ -228,11 +235,11 @@ export default function AboutCampaignRadial() {
                   </p>
                 </motion.div>
               ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Centered message below ring */}
-        <motion.div {...fadeInUp} className="mt-12 md:mt-16">
+        {/* <motion.div {...fadeInUp} className="mt-12 md:mt-16">
           <h3 className="text-[#1E4A86] text-2xl md:text-3xl font-bold text-center mb-2">
             <Diamond />{" "}
             <span className="mx-2">{t("about.campaign.message.title")}</span>{" "}
@@ -241,11 +248,8 @@ export default function AboutCampaignRadial() {
           <p className="text-gray-700 text-center text-sm md:text-base max-w-2xl mx-auto">
             {t("about.campaign.message.copy")}
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
 }
-
-
-
