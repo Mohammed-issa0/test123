@@ -278,5 +278,222 @@
   "about.campaign.who.copy": "A non-profit humanitarian organization that supports those affected in the city of El Fasher through relief and development.",
 
   "about.campaign.message.title": "Our Message",
-  "about.campaign.message.copy": "Delivering effective support to affected families transparently and in collaboration with humanitarian partners."
+  "about.campaign.message.copy": "Delivering effective support to affected families transparently and in collaboration with humanitarian partners.",
+
+  "title.city": "About the City of El Fasher",
+  "description.city": "El Fasher is a key city in the region, known for its rich history and its role in supporting surrounding communities. Our campaign focuses on transparent, cooperative efforts to deliver effective support to affected families.",
+
+  "offers.title": "What the Campaign Offers",
+  "offers.item1.title": "Health & Relief",
+  "offers.item1.description": "Providing medical assistance, primary healthcare support, and emergency relief for vulnerable families.",
+  "offers.item2.title": "Food Security",
+  "offers.item2.description": "Delivering food baskets and nutritional support in cooperation with humanitarian partners.",
+  "offers.item3.title": "Emergency Response",
+  "offers.item3.description": "Rapid interventions, first-aid kits, and coordination for urgent cases.",
+  "offers.item4.title": "Water & Sanitation",
+  "offers.item4.description": "Supplying clean water and hygiene kits to reduce disease risks.",
+
+  "stats.item1": "Families assisted through medical and relief services.",
+  "stats.item2": "Meals and food baskets distributed to affected households.",
+  "stats.item3": "Emergency cases supported with rapid response.",
+  "stats.item4": "Liters of clean water and hygiene kits delivered.",
+
+  "cases.title": "Real Stories We Supported",
+  "cases.item.name": "Beneficiary Name",
+  "cases.item.context": "Neighborhood / Camp / Area",
+  "cases.item.paragraph": "A short story describing the situation and how the campaign provided support transparently and in cooperation with partners.",
+
+  "partners.list.0": "World Relief Organization",
+  "partners.list.1": "Humanitarian Aid Committee",
+  "partners.list.2": "Community Health Initiative",
+  "partners.list.3": "Local Volunteers Network",
+
+  "hero.title": "About The City Of El Fasher",
+  "hero.body": "El Fasher, the capital of North Darfur in western Sudan, is a historic city with significant cultural and social depth. Its importance dates back centuries as the capital of the Darfur Sultanate during the reign of Sultan Ali Dinar, who left a clear mark on the city's history through his monuments and architectural achievements, such as his famous palace, which still stands and is a prominent tourist attraction.",
+  "hero.mapAlt": "Map of Sudan with landscapes",
+
+  "landmarks.heading.small": "One Of The Most",
+  "landmarks.heading.main": "Prominent Landmarks Of Fasher",
+
+  "landmarks.1.alt": "Nierti Waterfalls",
+  "landmarks.1.title1": "Nierti",
+  "landmarks.1.title2": "Waterfalls",
+  "landmarks.1.desc": "Providing school supplies and supporting children to return to school and build a better future.",
+
+  "landmarks.2.alt": "Al Fashir Lake",
+  "landmarks.2.title1": "Al Fashir",
+  "landmarks.2.title2": "Lake",
+  "landmarks.2.desc": "Providing school supplies and supporting children to return to school and build a better future.",
+
+  "landmarks.3.alt": "Murra Mount",
+  "landmarks.3.title1": "Murra",
+  "landmarks.3.title2": "Mount",
+  "landmarks.3.desc": "Providing school supplies and supporting children to return to school and build a better future.",
+
+  "stats.value": "200k",
+  "stats.title": "About The City Of El Fasher",
+  "stats.body": "Providing school supplies and supporting children to return to school and build a better future.",
+
+  "reviews.title": "Reviews",
+  "reviews.body": "Review body",
+  "reviews.reviewer": "Reviewer name",
+
+  "hero.title": "Plans And Programs",
+  "hero.subtitle": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "process.title": "Process",
+
+  "process.steps.1.number": "01",
+  "process.steps.1.title": "First",
+  "process.steps.1.description": "Delivering effective support to affected families with transparency and in cooperation with humanitarian partners. Delivering effective support to affected families with transparency.",
+  "process.steps.2.number": "02",
+  "process.steps.2.title": "Second",
+  "process.steps.2.description": "Delivering effective support to affected families with transparency and in cooperation with humanitarian partners. Delivering effective support to affected families with transparency.",
+  "process.steps.3.number": "03",
+  "process.steps.3.title": "Third",
+  "process.steps.3.description": "Delivering effective support to affected families with transparency and in cooperation with humanitarian partners. Delivering effective support to affected families with transparency.",
+
+  "donate.title": "Donate",
+  "donate.body": "Delivering effective support to affected families with transparency and in cooperation with humanitarian partners. Delivering effective support to affected families with transparency.",
+  "donate.cta": "Donate",
+  "donate.imageAlt": "Children smiling",
+
+  "numbers.title": "Numbers",
+  "numbers.items.1.number": "30",
+  "numbers.items.1.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "numbers.items.2.number": "30",
+  "numbers.items.2.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+
+  "faq.title": "Q&A",
+  "faq.1.question": "What are the roots and causes behind the outbreak of the Battle of El Fasher?",
+  "faq.1.answer": "• Sudanese Armed Forces (SAF): The national army, seeking to maintain state authority and prevent RSF expansion into Darfur.\n\n• Rapid Support Forces (RSF): A paramilitary group, originally from Darfur, aiming to take control of El Fasher due to its strategic and symbolic importance.\n\n• Darfur armed movements: Some factions (e.g., JEM, SLM/Minni Minawi) sometimes supported the army to prevent RSF from seizing the city.\n\n• Local communities: Tribal leaders and civilians—some neutral, others aligning for protection.\n\nIn essence, the army's goal is to hold the city, while the RSF's goal is to seize it as part of the broader power struggle.",
+  "faq.2.question": "Who are the warring parties in El Fasher, and what are their goals?",
+  "faq.2.answer": "Content for this question...",
+  "faq.3.question": "What is the humanitarian situation in El Fasher right now (refugees, food, health)?",
+  "faq.3.answer": "Content for this question...",
+  "faq.4.question": "Has there been any ceasefire or agreement to stop the fighting in El Fasher?",
+  "faq.4.answer": "Content for this question...",
+  "faq.5.question": "What are the possible consequences if El Fasher falls or changes control?",
+  "faq.5.answer": "Content for this question...",
+
+  "header.title": "Series Of Events",
+  "header.subtitle": "Delivering effective support to affected families transparently and in cooperation.",
+  "image.alt": "Timeline flow showing event sequence",
+
+  "timeline.1.date": "1.3.2024",
+  "timeline.1.text": "Delivering effective support to affected families transparently and in cooperation.",
+  "timeline.2.date": "1.4.2024",
+  "timeline.2.text": "Providing humanitarian relief in coordination with local partners.",
+  "timeline.3.date": "1.6.2024",
+  "timeline.3.text": "Launching the education support initiative for displaced children.",
+  "timeline.4.date": "1.9.2024",
+  "timeline.4.text": "Expanding the health and nutrition aid program across Darfur.",
+  "timeline.5.date": "1.3.2025",
+  "timeline.5.text": "Celebrating one year of continuous humanitarian efforts in El Fasher.",
+
+  "footer": {
+    "logoAlt": "Smiles of Hope Logo",
+    "support": {
+      "title": "Support",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "partners": "Partners",
+      "seminars": "Seminars",
+      "plansPrograms": "Plans & Programs"
+    },
+    "about": {
+      "title": "About",
+      "mission": "Our Mission",
+      "store": "Our Store",
+      "campaign": "About the Campaign",
+      "contact": "Contact Us",
+      "elfasher": "About El Fasher"
+    },
+    "contact": {
+      "phone": "Phone: +1 (555) 123-4567",
+      "email": "Email: info@smilesofhope.org",
+      "address": "123 Hope Street, El Fasher, North Darfur, Sudan"
+    },
+    "copyright": "All rights reserved."
+  },
+  "logoAlt": "Smiles of Hope Logo",
+
+  "support.title": "Support",
+  "support.privacy": "Privacy Policy",
+  "support.terms": "Terms & Conditions",
+  "support.partners": "Partners",
+  "support.seminars": "Seminars",
+  "support.plansPrograms": "Plans & Programs",
+
+  "about.title": "About",
+  "about.mission": "Our Mission",
+  "about.store": "Our Store",
+  "about.campaign": "About the Campaign",
+  "about.contact": "Contact Us",
+  "about.elfasher": "About El Fasher",
+
+  "contact.phone": "Phone: +1 (555) 123-4567",
+  "contact.email": "Email: info@smilesofhope.org",
+  "contact.address": "123 Hope Street, El Fasher, North Darfur, Sudan",
+
+  "copyright": "All rights reserved.",
+
+  "donate.title1": "Al-Fasher Hope Campaign",
+
+  "donate.tabs.once": "One-Time Donation",
+  "donate.tabs.monthly": "Monthly",
+
+  "donate.purpose.label": "Donation Purpose:",
+  "donate.purpose.placeholder": "Select a project",
+  "donate.purpose.options.water": "Clean Water",
+  "donate.purpose.options.food": "Food Baskets",
+  "donate.purpose.options.medical": "Medical Care",
+  "donate.purpose.options.support": "Psycho-social Support for Women & Girls",
+
+  "donate.amount.label": "Choose Amount",
+  "donate.amount.placeholder": "Enter a custom amount",
+  "donate.amount.quick100": "$100",
+
+  "donate.note.label": "Leave a Note (Optional)",
+  "donate.note.placeholder": "Write a message...",
+
+  "donate.payment.label": "Select Payment Method",
+  "donate.payment.methods.visa": "VISA",
+  "donate.payment.methods.paypal": "PayPal",
+  "donate.payment.methods.bank": "Bank Transfer",
+
+  "donate.soon": "Coming Soon",
+  "donate.next": "Next",
+
+  "bank.title": "Bank Transfer Details",
+
+  "bank.account.nameLabel": "Name:",
+  "bank.account.numberLabel": "Account Number:",
+  "bank.account.ibanLabel": "IBAN:",
+  "bank.account.name": "The National Al-Fasher Campaign",
+  "bank.account.number": "200243899488",
+  "bank.account.iban": "AE5464840406465504",
+
+  "bank.instructions": "Please complete the transfer, then fill out the form below and attach the transfer receipt.",
+
+  "bank.summary.type": "Donation Type:",
+  "bank.summary.typeMonthly": "Monthly",
+  "bank.summary.typeOnce": "One-time",
+  "bank.summary.amount": "Amount:",
+
+  "bank.form.fullName": "Full Name",
+  "bank.form.email": "Email",
+  "bank.form.notes": "Notes (Optional)",
+  "bank.form.receipt": "Attach Transfer Receipt",
+  "bank.form.hint": "Allowed types: PDF, JPG, PNG — up to 10MB",
+
+  "bank.btn.submit": "Send Receipt",
+  "bank.btn.sending": "Sending...",
+
+  "bank.success": "Receipt sent successfully. Thank you!",
+  "bank.errors.missing": "Please provide your name, email, and attach the receipt.",
+  "bank.errors.tooLarge": "File too large. Max size is 10MB.",
+  "bank.errors.submit": "Submission failed. Please try again later.",
+  "bank.errors.unknown": "An error occurred during submission.",
+
+  "bank.email.subject": "New Bank Transfer Receipt - {{name}}"
 }
