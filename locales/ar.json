@@ -498,5 +498,8 @@
   "bank.email.subject": "إيصال حوالة جديدة - {{name}}",
 
   "main.page": "الصفحة الرئيسية",
-  "center": "مركز الاعلام و الندوات"
+  "center": "مركز الاعلام و الندوات",
+
+  "bank.instructions.attachManual" : "يجب عليك ان ترفع الايصال يدويا"
 }
+
