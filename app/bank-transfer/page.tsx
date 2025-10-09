@@ -1,14 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/language-provider";
-
-const WEB3FORMS_ACCESS_KEY = "5c59e7bb-0656-4070-b907-acefc4ae87d3"; // ← مفتاحك
+import gmail1 from "@/public/imgs/gmail.png";
+import outlook1 from "@/public/imgs/outlook.png";
+const DONATIONS_EMAIL = "saveelfasher.sd@gmail.com";
+import Image from "next/image";
+function makeWebComposeLinks(to: string, subject: string, body: string) {
+  const crlfBody = body.replace(/\n/g, "\r\n");
+  const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    to
+  )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(crlfBody)}`;
+  const outlook = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(
+    to
+  )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    crlfBody
+  )}`;
+  return { gmail, outlook };
+}
 
 export default function BankTransferPage() {
   const { t, lang } = useLanguage();
@@ -19,11 +32,6 @@ export default function BankTransferPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
-  const [file, setFile] = useState<File | null>(null);
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-  const [message, setMessage] = useState<string>("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -31,60 +39,31 @@ export default function BankTransferPage() {
     setType(params.get("type") || "once");
   }, []);
 
-  const handleSubmit = async () => {
-    if (!fullName || !email || !file) {
-      setStatus("error");
-      setMessage(t("bank.errors.missing"));
-      return;
-    }
-    if (file.size > 10 * 1024 * 1024) {
-      setStatus("error");
-      setMessage(t("bank.errors.tooLarge"));
-      return;
-    }
+  
+  const { subject, body } = useMemo(() => {
+    const s = t("bank.email.subject", { name: fullName || "Donor" });
+    const lines = [
+      t("bank.email.body.header"),
+      `${t("bank.form.fullName")} ${fullName || "-"}`,
+      `${t("bank.form.email")} ${email || "-"}`,
+      `${t("bank.summary.type")} ${
+        type === "monthly"
+          ? t("bank.summary.typeMonthly")
+          : t("bank.summary.typeOnce")
+      }`,
+      `${t("bank.summary.amount")} ${amount ? `$${amount}` : "-"}`,
+      "",
+      t("bank.email.body.attachNotice"),
+      "",
+      `${t("bank.form.notes")} ${notes || "-"}`,
+    ];
+    return { subject: s, body: lines.join("\n") };
+  }, [t, fullName, email, type, amount, notes]);
 
-    setStatus("loading");
-    setMessage("");
-
-    const form = new FormData();
-    form.append("access_key", WEB3FORMS_ACCESS_KEY);
-    form.append("from_name", "Website Donations");
-    form.append("subject", t("bank.email.subject", { name: fullName }));
-    // إن رغبت بالتوجيه التلقائي بعد النجاح، أضِف redirect قبل الإرسال:
-    // form.append("redirect", `${window.location.origin}/thanks?amount=${encodeURIComponent(amount || "")}&type=${encodeURIComponent(type || "")}`);
-    // ويمكنك كذلك تحديد بريد الاستقبال هنا إن لم تضبطه من لوحة Web3Forms:
-    // form.append("to", "donations@yourdomain.org");
-
-    form.append("fullName", fullName);
-    form.append("email", email);
-    form.append("notes", notes);
-    form.append("amount", amount || "");
-    form.append("type", type || "");
-    form.append("receipt", file);
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: form,
-      });
-      const data = await res.json();
-
-      if (!data.success) {
-        throw new Error(data.message || t("bank.errors.submit"));
-      }
-
-      setStatus("success");
-      setMessage(t("bank.success"));
-      setFile(null);
-      setNotes("");
-      // لو استخدمت redirect أعلاه، Web3Forms سيعيد التوجيه تلقائيًا
-      // وإلا يمكنك التوجيه اليدوي:
-      // window.location.href = `${window.location.origin}/thanks?amount=${encodeURIComponent(amount || "")}&type=${encodeURIComponent(type || "")}`;
-    } catch (e: any) {
-      setStatus("error");
-      setMessage(e?.message || t("bank.errors.unknown"));
-    }
-  };
+  const { gmail, outlook } = useMemo(
+    () => makeWebComposeLinks(DONATIONS_EMAIL, subject, body),
+    [subject, body]
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -99,7 +78,7 @@ export default function BankTransferPage() {
             {t("bank.title")}
           </h1>
 
-          {/* بيانات البنك */}
+         
           <div
             className="rounded-2xl border border-gray-200 p-6 mb-10 bg-[#F8FAFC]"
             style={{ textAlign: isArabic ? "right" : "left" }}
@@ -127,9 +106,17 @@ export default function BankTransferPage() {
             <p className="text-gray-600 mt-4 text-sm">
               {t("bank.instructions")}
             </p>
+
+            
+            <div className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-amber-900 text-sm">
+              <span className="font-semibold">
+                ⚠️ {isArabic ? "تنبيه" : "Notice"}:{" "}
+              </span>
+              {t("bank.instructions.attachManual")}
+            </div>
           </div>
 
-          {/* الملخص */}
+          
           <div
             className="mb-8"
             style={{ textAlign: isArabic ? "right" : "left" }}
@@ -150,7 +137,7 @@ export default function BankTransferPage() {
             ) : null}
           </div>
 
-          {/* النموذج */}
+          
           <div className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <div style={{ textAlign: isArabic ? "right" : "left" }}>
@@ -187,45 +174,50 @@ export default function BankTransferPage() {
               />
             </div>
 
-            <div style={{ textAlign: isArabic ? "right" : "left" }}>
-              <label className="block text-[#061923] font-semibold mb-1">
-                {t("bank.form.receipt")}
-              </label>
-              <input
-                type="file"
-                accept="image/*,application/pdf"
-                onChange={(e) => setFile(e.target.files?.[0] || null)}
-                className="block w-full text-sm text-gray-700 file:mr-3 file:py-2 file:px-3 file:rounded file:border-0 file:bg-[#E8F7FC] file:text-[#00A3E0] hover:file:bg-[#D9F1FA] cursor-pointer"
-              />
-              <p className="text-xs text-gray-500 mt-1">
-                {t("bank.form.hint")}
-              </p>
-            </div>
-
+           
             <div className="pt-2">
-              <Button
-                onClick={handleSubmit}
-                disabled={status === "loading"}
-                className="w-full bg-[#00A3E0] hover:bg-[#0088BD] text-white py-6 text-lg font-semibold rounded-lg disabled:opacity-70"
-              >
-                {status === "loading"
-                  ? t("bank.btn.sending")
-                  : t("bank.btn.submit")}
-              </Button>
-              {message && (
-                <p
-                  className={`mt-3 text-sm ${
-                    status === "success"
-                      ? "text-green-600"
-                      : status === "error"
-                      ? "text-red-600"
-                      : "text-gray-600"
-                  }`}
-                  style={{ textAlign: isArabic ? "right" : "left" }}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href={gmail}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#EA4335] px-5 py-4 text-white font-semibold shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EA4335]"
+                  aria-label="Compose email in Gmail"
                 >
-                  {message}
-                </p>
-              )}
+                 
+                  <Image
+                    src={gmail1}
+                    alt="outlook"
+                    width={40}
+                    className="bg-white rounded-full p-1"
+                  />
+                  {isArabic ? "فتح Gmail" : "Open Gmail"}
+                </a>
+
+                <a
+                  href={outlook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0F6CBD] px-5 py-4 text-white font-semibold shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0F6CBD]"
+                  aria-label="Compose email in Outlook Web"
+                >
+                  <Image
+                    src={outlook1}
+                    alt="outlook"
+                    width={40}
+                    className="bg-white rounded-full p-1"
+                  />
+                  {isArabic ? "فتح Outlook Web" : "Open Outlook Web"}
+                </a>
+              </div>
+
+              
+              <p
+                className="text-xs text-gray-500 mt-3"
+                style={{ textAlign: isArabic ? "right" : "left" }}
+              >
+                {t("bank.hint.mailtoLimit")}
+              </p>
             </div>
           </div>
         </div>
