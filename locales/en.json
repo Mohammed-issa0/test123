@@ -497,5 +497,8 @@
 
   "bank.email.subject": "New Bank Transfer Receipt - {{name}}",
   "main.page": "Main Page",
-  "center": "Media and Seminars Center"
+  "center": "Media and Seminars Center",
+
+  "bank.instructions.attachManual" : "You must upload the receipt manually."
 }
+
