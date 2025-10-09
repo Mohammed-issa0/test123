@@ -495,5 +495,7 @@
   "bank.errors.submit": "Submission failed. Please try again later.",
   "bank.errors.unknown": "An error occurred during submission.",
 
-  "bank.email.subject": "New Bank Transfer Receipt - {{name}}"
+  "bank.email.subject": "New Bank Transfer Receipt - {{name}}",
+  "main.page": "Main Page",
+  "center": "Media and Seminars Center"
 }

@@ -495,5 +495,8 @@
   "bank.errors.submit": "فشل الإرسال، حاول لاحقًا.",
   "bank.errors.unknown": "حدث خطأ أثناء الإرسال.",
 
-  "bank.email.subject": "إيصال حوالة جديدة - {{name}}"
+  "bank.email.subject": "إيصال حوالة جديدة - {{name}}",
+
+  "main.page": "الصفحة الرئيسية",
+  "center": "مركز الاعلام و الندوات"
 }
