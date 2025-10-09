@@ -131,20 +131,12 @@ export function Projects() {
               <p className="text-[#07334A] text-sm leading-relaxed mb-4 text-center md:text-start">
                 {t(`projects.items.${it.id}.desc`)}
               </p>
-
-              <motion.button
-                whileHover={{ x: 5 }}
-                className="text-[#02273B] text-sm font-semibold flex items-center justify-center md:justify-end gap-1 hover:gap-2 transition-all w-full"
-              >
-                {t("projects.readMore")}
-                <ChevronRight className="w-4 h-4" />
-              </motion.button>
             </motion.div>
           ))}
         </div>
 
         {/* Show All Projects Button */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -160,7 +152,7 @@ export function Projects() {
               <ChevronRight className="w-5 h-5 ms-2" />
             </Button>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

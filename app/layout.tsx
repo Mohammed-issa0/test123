@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-provider";
-
+import AntiSave from "@/components/AntiSave";
 export const metadata: Metadata = {
   title: "Smiles-of-Hope Foundation - Together To Help Our People In El Fasher",
   description:
@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <body className={`raleway overflow-x-hidden`}>
+        <AntiSave />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
